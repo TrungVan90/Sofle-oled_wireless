@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BACKSPACE, TAB, Q, W, E, R, T, Y, U, I, O, P, ENTER, CAPSLOCK, A, S, D, F, G, H, J, K, L, ;, '''',
-    LSHFT, Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, lower, SPACE, SPACE, raise, RCTRL, RALT, RGUI]
+  default: [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BACKSPACE, TAB, Q, W, E, R, T, Y, U, I, O, P, ENTER, LEFT SHIFT, A, S, D, F, G, H, J, K, L, ;,
+    '''', LCTRL, Z, X, C, V, B, MUTE, '', N, M, ',', ., /, RSHFT, CAPSLOCK, LWIN, LEFT ALT, lower, SPACE, SPACE, raise, APP, RALT, RCTRL]
   lower:
   - {t: ▽, type: trans}
   - F1
@@ -82,11 +82,11 @@ layers:
   - CMENU
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - HOME
   - PAGE UP
   - UP
   - PAGE DOWN
-  - HOME
+  - {t: ▽, type: trans}
   - DELETE
   - {t: ▽, type: trans}
   - LALT
@@ -94,11 +94,11 @@ layers:
   - LSHFT
   - {t: ▽, type: trans}
   - CLCK
-  - {t: ▽, type: trans}
+  - END
   - LEFT
   - DOWN
   - RIGHT
-  - END
+  - {t: ▽, type: trans}
   - BSPC
   - {t: ▽, type: trans}
   - UNDO
