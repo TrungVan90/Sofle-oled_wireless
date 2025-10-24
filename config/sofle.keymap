@@ -41,11 +41,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2        &kp N3    &kp N4        &kp N5                              &kp N6     &kp N7         &kp N8     &kp N9     &kp N0    &kp MINUS
-&kp TAB         &kp Q   &kp W         &kp E     &kp R         &kp T                               &kp Y      &kp U          &kp I      &kp O      &kp P     &kp EQUAL
-&kp LEFT_SHIFT  &kp A   &kp S         &kp D     &kp F         &kp G                               &kp H      &kp J          &kp K      &kp L      &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X         &kp C     &kp V         &kp B      &kp C_MUTE    &none      &kp N      &kp M          &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-                        &kp CAPSLOCK  &kp LWIN  &kp LEFT_ALT  &mo LOWER  &kp SPACE     &kp SPACE  &mo RAISE  &kp RIGHT_ALT  &kp K_APP  &kp RCTRL
+&kp ESC         &kp N1  &kp N2         &kp N3    &kp N4        &kp N5                              &kp N6     &kp N7         &kp N8     &kp N9     &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W          &kp E     &kp R         &kp T                               &kp Y      &kp U          &kp I      &kp O      &kp P     &kp EQUAL
+&kp LEFT_SHIFT  &kp A   &kp S          &kp D     &kp F         &kp G                               &kp H      &kp J          &kp K      &kp L      &kp SEMI  &kp RIGHT_SHIFT
+&kp LCTRL       &kp Z   &kp X          &kp C     &kp V         &kp B      &kp C_MUTE    &none      &kp N      &kp M          &kp COMMA  &kp DOT    &kp FSLH  &kp RCTRL
+                        &kp BACKSPACE  &kp LWIN  &kp LEFT_ALT  &mo LOWER  &kp SPACE     &kp SPACE  &mo RAISE  &kp RIGHT_ALT  &kp K_APP  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -84,9 +84,9 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans    &trans       &trans    &trans         &trans  &trans
-&trans  &kp INS       &kp PSCRN     &kp K_CMENU   &none         &none                               &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp DELETE
-&trans  &kp LALT      &kp LCTRL     &kp LSHFT     &none         &kp CLCK                            &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp BSPC
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans    &trans       &trans    &trans         &trans  &kp DELETE
+&trans  &kp INS       &kp PSCRN     &kp K_CMENU   &none         &none                               &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none   &kp BACKSPACE
+&trans  &kp LALT      &kp LCTRL     &kp LSHFT     &none         &kp CLCK                            &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &none   &kp SQT
 &trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &none         &bt BT_CLR    &trans  &none     &none        &none     &none          &none   &kp ENTER
                       &trans        &trans        &trans        &trans        &trans        &trans  &trans    &trans       &trans    &trans
             >;
