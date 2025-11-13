@@ -125,15 +125,15 @@ layers:
   raise:
   - {t: ▽, type: trans}
   - F1
-  - {t: F2, h: toggle}
-  - {t: F3, h: toggle}
-  - {t: F4, h: toggle}
-  - {t: F5, h: toggle}
-  - {t: F6, h: toggle}
-  - {t: F7, h: toggle}
-  - {t: F8, h: toggle}
-  - {t: F9, h: toggle}
-  - {t: F10, h: toggle}
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
   - F11
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
@@ -145,7 +145,7 @@ layers:
   - PAGE UP
   - UP
   - PAGE DOWN
-  - {t: BACKSPACE, h: toggle}
+  - BACKSPACE
   - F12
   - {t: ▽, type: trans}
   - LALT
