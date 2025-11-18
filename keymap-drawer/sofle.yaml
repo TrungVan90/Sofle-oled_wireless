@@ -157,7 +157,7 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - ''
+  - DELETE
   - RIGHT SHIFT
   - {t: ▽, type: trans}
   - UNDO
