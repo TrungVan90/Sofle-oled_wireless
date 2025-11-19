@@ -80,37 +80,37 @@ layers:
   - '3'
   - '4'
   - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - HOME
+  - ''
+  - UP ARROW
+  - ''
+  - PAGE UP
   - F12
   - {t: ▽, type: trans}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - KP MULTIPLY
-  - (
-  - )
+  - UNDO
+  - CUT
+  - COPY
+  - PASTE
+  - PRINTSCREEN
+  - END
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PAGE DOWN
   - '|'
   - {t: ▽, type: trans}
-  - '='
-  - '-'
-  - KP PLUS
+  - DELETE
+  - ''
+  - ''
   - '{'
   - '}'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '['
   - ']'
-  - '-'
-  - +
   - \
+  - ''
+  - DELETE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,37 +142,37 @@ layers:
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
   - HOME
-  - PAGE UP
-  - UP
-  - PAGE DOWN
-  - BACKSPACE
-  - F12
-  - {t: ▽, type: trans}
-  - LALT
-  - LCTRL
-  - LSHFT
   - ''
-  - CLCK
-  - END
-  - LEFT
-  - DOWN
-  - RIGHT
-  - DELETE
-  - RIGHT SHIFT
+  - UP
+  - ''
+  - PAGE UP
+  - F12
   - {t: ▽, type: trans}
   - UNDO
   - CUT
   - COPY
   - PASTE
+  - CLCK
+  - END
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PAGE DOWN
+  - RIGHT SHIFT
+  - {t: ▽, type: trans}
+  - DELETE
   - ''
+  - ''
+  - '{'
+  - '}'
   - BT CLR
   - {t: ▽, type: trans}
+  - '['
+  - ']'
+  - \
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ENTER
+  - DELETE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
