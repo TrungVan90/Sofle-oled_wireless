@@ -100,7 +100,7 @@ layers:
   - '|'
   - {t: ▽, type: trans}
   - DELETE
-  - ''
+  - BACKSPACE
   - ''
   - '{'
   - '}'
@@ -109,7 +109,7 @@ layers:
   - '['
   - ']'
   - \
-  - ''
+  - BACKSPACE
   - DELETE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -161,7 +161,7 @@ layers:
   - RIGHT SHIFT
   - {t: ▽, type: trans}
   - DELETE
-  - ''
+  - BACKSPACE
   - ''
   - '{'
   - '}'
@@ -170,7 +170,7 @@ layers:
   - '['
   - ']'
   - \
-  - ''
+  - BACKSPACE
   - DELETE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
