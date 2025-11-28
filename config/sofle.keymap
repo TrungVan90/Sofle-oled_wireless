@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define LOWER 1
@@ -62,11 +61,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans     &kp F1      &kp F2         &kp F3      &kp F4       &kp F5                             &kp F6    &kp F7    &kp F8         &kp F9         &kp F10        &kp F11
-&kp GRAVE  &kp N1      &kp N2         &kp N3      &kp N4       &kp N5                             &kp HOME  &none     &kp UP_ARROW   &none          &kp PAGE_UP    &kp F12
-&trans     &kp K_UNDO  &kp K_CUT      &kp K_COPY  &kp K_PASTE  &kp PRINTSCREEN                    &kp END   &kp LEFT  &kp DOWN       &kp RIGHT      &kp PAGE_DOWN  &kp PIPE
-&trans     &kp DELETE  &kp BACKSPACE  &none       &kp LBRC     &kp RIGHT_BRACE  &trans    &trans  &kp LBKT  &kp RBKT  &kp BACKSLASH  &kp BACKSPACE  &kp DELETE     &trans
-                       &trans         &trans      &trans       &trans           &trans    &trans  &trans    &trans    &trans         &trans
+&trans     &kp F1      &kp F2         &kp F3      &kp F4       &kp F5                             &kp F6          &kp F7          &kp F8           &kp F9         &kp F10            &kp F11
+&kp GRAVE  &kp N1      &kp N2         &kp N3      &kp N4       &kp N5                             &kp HOME        &none           &kp PAGE_UP      &none          &kp LEFT_BRACKET   &kp F12
+&trans     &kp K_UNDO  &kp K_CUT      &kp K_COPY  &kp K_PASTE  &kp PRINTSCREEN                    &kp END         &kp UP_ARROW    &kp PAGE_DOWN    &none          &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans     &kp DELETE  &kp BACKSPACE  &none       &none        &kp CAPSLOCK     &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &kp DELETE         &trans
+                       &trans         &trans      &trans       &trans           &trans    &trans  &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -83,26 +82,24 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &kp F1        &kp F2         &kp F3        &kp F4          &kp F5                                 &kp F6            &kp F7             &kp F8         &kp F9         &kp F10        &kp F11
-&trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4                           &kp HOME          &none              &kp UP         &none          &kp PAGE_UP    &kp F12
-&trans  &kp K_UNDO    &kp K_CUT      &kp K_COPY    &kp K_PASTE     &kp CLCK                               &kp END           &kp LEFT           &kp DOWN       &kp RIGHT      &kp PAGE_DOWN  &kp RIGHT_SHIFT
-&trans  &kp DELETE    &kp BACKSPACE  &none         &kp LEFT_BRACE  &kp RIGHT_BRACE  &bt BT_CLR    &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp BACKSPACE  &kp DELETE     &trans
-                      &trans         &trans        &trans          &trans           &trans        &trans  &trans            &trans             &trans         &trans
+&trans  &kp F1        &kp F2         &kp F3        &kp F4        &kp F5                                 &kp F6          &kp F7          &kp F8           &kp F9         &kp F10            &kp F11
+&trans  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &kp HOME        &none           &kp PAGE_UP      &none          &kp LEFT_BRACKET   &kp F12
+&trans  &kp K_UNDO    &kp K_CUT      &kp K_COPY    &kp K_PASTE   &kp PRINTSCREEN                        &kp END         &kp UP_ARROW    &kp PAGE_DOWN    &none          &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans  &kp DELETE    &kp BACKSPACE  &none         &none         &kp CAPSLOCK     &bt BT_CLR    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &kp DELETE         &trans
+                      &trans         &trans        &trans        &trans           &trans        &trans  &trans          &trans          &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        layer_3 {
+        layer_4 {
             bindings = <
-&trans  &kp F1      &kp F2          &kp F3          &kp F4           &kp F5                    &kp F6    &kp F7    &kp F8    &kp F9         &kp F10     &kp F11
-&trans  &none       &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none                     &kp HOME  &none     &kp UP    &none          &kp PG_UP   &kp F12
-&trans  &none       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                     &kp END   &kp LEFT  &kp DOWN  &kp RIGHT      &kp PG_DN   &trans
-&trans  &kp DELETE  &kp BACKSPACE   &none           &none            &none   &trans    &trans  &none     &none     &none     &kp BACKSPACE  &kp DELETE  &trans
-                    &trans          &trans          &trans           &trans  &trans    &trans  &trans    &trans    &trans    &trans
+&trans  &trans   &trans         &trans  &trans  &trans                    &trans          &kp BACKSPACE   &kp DELETE       &kp SLASH     &kp ASTERISK  &kp MINUS
+&trans  &trans   &trans         &trans  &trans  &trans                    &kp HOME        &none           &kp PAGE_UP      &kp NUMBER_7  &kp NUMBER_8  &mt PLUS NUMBER_9
+&trans  &trans   &trans         &trans  &trans  &trans                    &kp END         &kp UP_ARROW    &kp PAGE_DOWN    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
+&trans  &kp DEL  &kp BACKSPACE  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+                 &trans         &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
     };
 };
