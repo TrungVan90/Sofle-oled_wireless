@@ -55,7 +55,7 @@ layers:
   - LEFT ALT
   - lower
   - SPACE
-  - {t: '3', h: toggle}
+  - {t: '4', h: toggle}
   - ENTER
   - SPACE
   - raise
@@ -82,9 +82,9 @@ layers:
   - '5'
   - HOME
   - ''
-  - UP ARROW
-  - ''
   - PAGE UP
+  - ''
+  - '['
   - F12
   - {t: ▽, type: trans}
   - UNDO
@@ -93,22 +93,22 @@ layers:
   - PASTE
   - PRINTSCREEN
   - END
-  - LEFT
-  - DOWN
-  - RIGHT
+  - UP ARROW
   - PAGE DOWN
-  - '|'
+  - ''
+  - ']'
+  - \
   - {t: ▽, type: trans}
   - DELETE
   - BACKSPACE
   - ''
-  - '{'
-  - '}'
+  - ''
+  - CAPSLOCK
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - \
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
   - BACKSPACE
   - DELETE
   - {t: ▽, type: trans}
@@ -143,33 +143,33 @@ layers:
   - {t: BT, h: '4'}
   - HOME
   - ''
-  - UP
-  - ''
   - PAGE UP
+  - ''
+  - '['
   - F12
   - {t: ▽, type: trans}
   - UNDO
   - CUT
   - COPY
   - PASTE
-  - CLCK
+  - PRINTSCREEN
   - END
-  - LEFT
-  - DOWN
-  - RIGHT
+  - UP ARROW
   - PAGE DOWN
-  - RIGHT SHIFT
+  - ''
+  - ']'
+  - \
   - {t: ▽, type: trans}
   - DELETE
   - BACKSPACE
   - ''
-  - '{'
-  - '}'
+  - ''
+  - CAPSLOCK
   - BT CLR
   - {t: ▽, type: trans}
-  - '['
-  - ']'
-  - \
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
   - BACKSPACE
   - DELETE
   - {t: ▽, type: trans}
@@ -183,57 +183,57 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '3':
+  '4':
   - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
   - {t: ▽, type: trans}
-  - ''
-  - '&mkp LCLK'
-  - '&mmv MOVE_UP'
-  - '&mkp RCLK'
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BACKSPACE
+  - DELETE
+  - /
+  - '*'
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - HOME
   - ''
-  - UP
-  - ''
-  - PG UP
-  - F12
+  - PAGE UP
+  - '7'
+  - '8'
+  - {t: '9', h: +}
   - {t: ▽, type: trans}
-  - ''
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - END
-  - LEFT
-  - DOWN
-  - RIGHT
-  - PG DN
+  - UP ARROW
+  - PAGE DOWN
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - DELETE
+  - DEL
   - BACKSPACE
-  - ''
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - BACKSPACE
-  - DELETE
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
