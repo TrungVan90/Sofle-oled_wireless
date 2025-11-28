@@ -190,12 +190,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BACKSPACE
-  - DELETE
-  - /
-  - '*'
-  - '-'
+  - ''
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -205,9 +205,9 @@ layers:
   - HOME
   - ''
   - PAGE UP
-  - '7'
-  - '8'
-  - {t: '9', h: +}
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -217,9 +217,9 @@ layers:
   - END
   - UP ARROW
   - PAGE DOWN
-  - '4'
-  - '5'
-  - '6'
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - DEL
   - BACKSPACE
@@ -231,9 +231,9 @@ layers:
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT ARROW
-  - '1'
-  - '2'
-  - '3'
+  - '0'
+  - .
+  - DELETE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
