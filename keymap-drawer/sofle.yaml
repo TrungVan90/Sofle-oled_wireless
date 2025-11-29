@@ -2,17 +2,17 @@ layout: {zmk_keyboard: sofle}
 layers:
   default:
   - ESC
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '-'
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
   - TAB
   - Q
   - W
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - P
-  - '='
+  - F12
   - LEFT SHIFT
   - A
   - S
@@ -53,9 +53,9 @@ layers:
   - RCTRL
   - LEFT WIN
   - LEFT ALT
-  - lower
+  - '4'
   - SPACE
-  - {t: '4', h: toggle}
+  - {t: lower, h: toggle}
   - ENTER
   - SPACE
   - raise
@@ -63,58 +63,58 @@ layers:
   - APP
   lower:
   - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BACKSPACE
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - HOME
   - ''
-  - PAGE UP
-  - ''
-  - '['
-  - F12
-  - {t: ▽, type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
-  - PRINTSCREEN
-  - END
   - UP ARROW
-  - PAGE DOWN
   - ''
-  - ']'
-  - \
-  - {t: ▽, type: trans}
+  - PAGE UP
   - DELETE
-  - BACKSPACE
+  - {t: ▽, type: trans}
   - ''
   - ''
-  - CAPSLOCK
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - END
   - LEFT ARROW
   - DOWN ARROW
-  - RIGHT ARROW
-  - BACKSPACE
+  - RIGHT
+  - PAGE DOWN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - DELETE
+  - BACKSPACE
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -124,41 +124,41 @@ layers:
   - {t: ▽, type: trans}
   raise:
   - {t: ▽, type: trans}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - HOME
-  - ''
-  - PAGE UP
-  - ''
-  - '['
-  - F12
+  - '*'
+  - '|'
+  - (
+  - )
+  - '!'
+  - '-'
   - {t: ▽, type: trans}
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
-  - PRINTSCREEN
-  - END
-  - UP ARROW
-  - PAGE DOWN
+  - CALCULATOR
   - ''
+  - PAUSE BREAK
+  - INSERT
+  - PRINTSCREEN
+  - '='
+  - <
+  - '['
   - ']'
-  - \
+  - '>'
+  - '~'
   - {t: ▽, type: trans}
   - DELETE
   - BACKSPACE
@@ -167,11 +167,11 @@ layers:
   - CAPSLOCK
   - BT CLR
   - {t: ▽, type: trans}
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
-  - BACKSPACE
-  - DELETE
+  - ''
+  - '&'
+  - '{'
+  - '}'
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -185,54 +185,54 @@ layers:
   - {t: ▽, type: trans}
   '4':
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - /
   - '*'
   - '-'
+  - BACKSPACE
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - '7'
   - '8'
   - '9'
   - +
+  - BACKSPACE
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - '4'
   - '5'
   - '6'
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - DELETE
+  - BACKSPACE
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
   - '1'
   - '2'
   - '3'
-  - {t: ▽, type: trans}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -241,6 +241,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '0', type: held}
+  - '0'
   - .
-  - {t: ▽, type: trans}
+  - ''
