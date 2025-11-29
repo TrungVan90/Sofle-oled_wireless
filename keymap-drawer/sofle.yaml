@@ -99,8 +99,8 @@ layers:
   - PAGE DOWN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DELETE
   - BACKSPACE
+  - DELETE
   - ''
   - ''
   - ''
@@ -160,8 +160,8 @@ layers:
   - '>'
   - '~'
   - {t: ▽, type: trans}
-  - DELETE
   - BACKSPACE
+  - DELETE
   - ''
   - ''
   - CAPSLOCK
@@ -221,8 +221,8 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DELETE
   - BACKSPACE
+  - DELETE
   - ''
   - ''
   - ''
