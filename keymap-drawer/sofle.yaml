@@ -87,10 +87,10 @@ layers:
   - '!'
   - '-'
   - {t: ▽, type: trans}
-  - CUT
-  - CUT
-  - COPY
-  - PASTE
+  - CALC
+  - ''
+  - ''
+  - ''
   - PRINTSCREEN
   - '='
   - <
