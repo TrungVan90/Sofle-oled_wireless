@@ -73,7 +73,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
