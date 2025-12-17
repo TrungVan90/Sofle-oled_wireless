@@ -150,9 +150,9 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - PAUSE BREAK
+  - INSERT
+  - PRINTSCREEN
   - '='
   - <
   - '['
@@ -164,7 +164,7 @@ layers:
   - DELETE
   - ''
   - ''
-  - ''
+  - CAPSLOCK
   - BT CLR
   - {t: ▽, type: trans}
   - ''
