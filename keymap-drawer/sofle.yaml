@@ -210,9 +210,9 @@ layers:
   - BACKSPACE
   - {t: ▽, type: trans}
   - ''
-  - ''
-  - ''
-  - ''
+  - '&fz_left'
+  - '&fz_mid'
+  - '&fz_right'
   - ''
   - ''
   - '4'
@@ -243,4 +243,4 @@ layers:
   - {t: ▽, type: trans}
   - '0'
   - .
-  - ''
+  - {t: ▽, type: trans}
