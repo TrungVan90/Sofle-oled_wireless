@@ -76,9 +76,9 @@ layers:
   - BACKSPACE
   - {t: ▽, type: trans}
   - ''
-  - '&mkp LCLK'
+  - '&msc SCRL_DOWN'
   - '&mmv MOVE_UP'
-  - '&mkp RCLK'
+  - '&msc SCRL_UP'
   - ''
   - HOME
   - ''
@@ -87,7 +87,7 @@ layers:
   - PAGE UP
   - DELETE
   - {t: ▽, type: trans}
-  - '&mkp MCLK'
+  - ''
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
@@ -107,9 +107,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
-  - ''
-  - ''
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
