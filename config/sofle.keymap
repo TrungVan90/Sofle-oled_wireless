@@ -17,27 +17,50 @@
 / {
     macros {
         fz_left: fz_left {
-            compatible = "zmk,behavior-macro";
             label = "FZ_LEFT";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_CTRL &kp LEFT_ALT &kp N1>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
         };
 
         fz_mid: fz_mid {
-            compatible = "zmk,behavior-macro";
             label = "FZ_MID";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_CTRL &kp LEFT_ALT &kp N2>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
         };
 
         fz_right: fz_right {
-            compatible = "zmk,behavior-macro";
             label = "FZ_RIGHT";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_CTRL &kp LEFT_ALT &kp N3>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
 
