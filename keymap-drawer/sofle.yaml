@@ -55,7 +55,7 @@ layers:
   - LEFT ALT
   - '4'
   - SPACE
-  - {t: lower, h: toggle}
+  - '&tog_lower_notify'
   - ENTER
   - SPACE
   - raise
