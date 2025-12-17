@@ -11,6 +11,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 
+// Cấu hình tốc độ mouse (tùy chỉnh trước khi include pointing.h)
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // Tốc độ di chuyển (default: 600)
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // Tốc độ scroll (default: 10)
+
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
