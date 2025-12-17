@@ -76,9 +76,9 @@ layers:
   - BACKSPACE
   - {t: ▽, type: trans}
   - ''
-  - ''
-  - ''
-  - ''
+  - '&mkp LCLK'
+  - '&mmv MOVE_UP'
+  - '&mkp RCLK'
   - ''
   - HOME
   - ''
@@ -87,10 +87,10 @@ layers:
   - PAGE UP
   - DELETE
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
+  - '&mkp MCLK'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
   - ''
   - END
   - LEFT ARROW
@@ -126,8 +126,8 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - '&mmv MOVE_UP'
-  - '&mkp RCLK'
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -138,7 +138,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
-  - '&mkp LCLK'
+  - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
   - '*'
@@ -148,10 +148,10 @@ layers:
   - '!'
   - '-'
   - {t: ▽, type: trans}
-  - '&mmv MOVE_LEFT'
-  - '&mkp MCLK'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - '='
   - <
