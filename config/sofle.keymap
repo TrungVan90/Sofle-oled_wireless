@@ -15,6 +15,52 @@
 
 / {
     // Activate ADJUST layer by pressing raise and lower
+    macros {
+        fz_left: fz_left {
+            label = "FZ_LEFT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+
+        fz_mid: fz_mid {
+            label = "FZ_MID";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+
+        fz_right: fz_right {
+            label = "FZ_RIGHT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -87,7 +133,7 @@
             bindings = <
 &trans  &none       &none          &none   &none   &none                     &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp BACKSPACE
 &trans  &none       &none          &none   &none   &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp BACKSPACE
-&trans  &none       &none          &none   &none   &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &trans
+&trans  &none       fz_left        fz_mid  fz_right   &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &trans
 &trans  &kp BACKSPACE  &kp DELETE  &none   &none   &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
                     &trans         &trans  &trans  &trans  &trans    &trans  &trans  &kp NUMBER_0  &kp PERIOD    &none
             >;
