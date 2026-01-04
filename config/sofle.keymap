@@ -69,6 +69,20 @@
                 ;
         };
 
+        fz_cal: fz_cal {
+            label = "FZ_CAL";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp R>
+                , <&macro_release &kp LGUI>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kp C &kp A &kp L &kp C>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
+
         // Macro gửi Ctrl+Alt+Shift+L để trigger AutoHotkey notification
         notify_lower: notify_lower {
             label = "NOTIFY_LOWER";
@@ -85,18 +99,7 @@
                 ;
         };
 
-        // Macro kết hợp: Toggle LOWER + Gửi notification
-        tog_lower_notify: tog_lower_notify {
-            label = "TOG_LOWER_NOTIFY";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&tog 1>              // Toggle layer 1 (LOWER)
-                , <&macro_pause_for_release>
-                , <&notify_lower>       // Gửi Ctrl+Alt+L
-                ;
-        };
-    };
+        
 
     keymap {
         compatible = "zmk,keymap";
@@ -116,10 +119,10 @@
 &kp TAB         &kp Q   &kp W         &kp E         &kp R   &kp T                                          &kp Y      &kp U   &kp I          &kp O      &kp P     &kp F12
 &kp LEFT_SHIFT  &kp A   &kp S         &kp D         &kp F   &kp G                                          &kp H      &kp J   &kp K          &kp L      &kp SEMI  &mt RIGHT_SHIFT SQT
 &kp LCTRL       &kp Z   &kp X         &kp C         &kp V   &kp B      &kp C_MUTE               &none      &kp N      &kp M   &kp COMMA      &kp DOT    &kp FSLH  &kp RCTRL
-                        &kp LEFT_WIN  &kp LEFT_ALT  &mo 3   &kp SPACE  &tog_lower_notify        &kp ENTER  &kp SPACE  &mo 2   &kp RIGHT_ALT  &kp K_APP
+                        &kp LEFT_WIN  &kp LEFT_ALT  &mo 3   &kp SPACE  &mo 2                    &kp ENTER  &kp SPACE  &mo 1   &kp RIGHT_ALT  &kp K_APP
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         lower_layer {
@@ -141,7 +144,7 @@
                        &trans               &trans           &trans             &trans  &trans      &trans  &trans    &trans          &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         raise_layer {
@@ -162,16 +165,16 @@
                           &trans           &trans             &trans        &trans           &trans             &trans  &trans        &trans         &trans                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         layer_4 {
             bindings = <
 &trans  &none          &none       &none    &none      &none                     &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp BACKSPACE
-&trans  &none          &none       &none    &none      &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp BACKSPACE
+&trans  &none          &none       &none    &none      &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp DELETE
 &trans  &none          &fz_left    &fz_mid  &fz_right  &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &trans
-&trans  &kp BACKSPACE  &kp DELETE  &none    &none      &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
-                       &trans      &trans   &trans     &trans  &trans    &trans  &trans  &kp NUMBER_0  &kp PERIOD    &trans
+&trans  &kp BACKSPACE  &kp DELETE  &fz_cal  &none      &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+                       &trans      &trans   &trans     &trans  &trans    &trans  &trans  &kp NUMBER_0  &kp PERIOD    &none
             >;
         };
     };
