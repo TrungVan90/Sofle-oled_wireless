@@ -82,24 +82,7 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
-
-        // Macro gửi Ctrl+Alt+Shift+L để trigger AutoHotkey notification
-        notify_lower: notify_lower {
-            label = "NOTIFY_LOWER";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_press &kp LALT>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp L>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-
-        
+     
 
     keymap {
         compatible = "zmk,keymap";
