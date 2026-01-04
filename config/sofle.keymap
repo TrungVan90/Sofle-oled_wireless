@@ -98,9 +98,8 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-
+     };
         
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -122,7 +121,7 @@
                         &kp LEFT_WIN  &kp LEFT_ALT  &mo 3   &kp SPACE  &mo 2                    &kp ENTER  &kp SPACE  &mo 1   &kp RIGHT_ALT  &kp K_APP
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         lower_layer {
@@ -144,7 +143,7 @@
                        &trans               &trans           &trans             &trans  &trans      &trans  &trans    &trans          &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         raise_layer {
@@ -165,7 +164,7 @@
                           &trans           &trans             &trans        &trans           &trans             &trans  &trans        &trans         &trans                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
         layer_4 {
