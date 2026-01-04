@@ -82,7 +82,24 @@
                 , <&macro_tap &kp ENTER>
                 ;
         };
-     
+
+        // Macro gửi Ctrl+Alt+Shift+L để trigger AutoHotkey notification
+        notify_lower: notify_lower {
+            label = "NOTIFY_LOWER";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp L>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        
 
     keymap {
         compatible = "zmk,keymap";
@@ -105,7 +122,7 @@
                         &kp LEFT_WIN  &kp LEFT_ALT  &mo 3   &kp SPACE  &mo 2                    &kp ENTER  &kp SPACE  &mo 1   &kp RIGHT_ALT  &kp K_APP
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -127,7 +144,7 @@
                        &trans               &trans           &trans             &trans  &trans      &trans  &trans    &trans          &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -148,7 +165,7 @@
                           &trans           &trans             &trans        &trans           &trans             &trans  &trans        &trans         &trans                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_4 {
