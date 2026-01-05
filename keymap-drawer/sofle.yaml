@@ -55,7 +55,7 @@ layers:
   - LEFT ALT
   - '4'
   - SPACE
-  - raise
+  - BACKSPACE
   - ENTER
   - SPACE
   - lower
@@ -73,7 +73,7 @@ layers:
   - ''
   - ''
   - ''
-  - BACKSPACE
+  - DELETE
   - {t: ▽, type: trans}
   - ''
   - '&msc SCRL_DOWN'
@@ -85,7 +85,7 @@ layers:
   - UP ARROW
   - ''
   - PAGE UP
-  - DELETE
+  - ''
   - {t: ▽, type: trans}
   - ''
   - '&mmv MOVE_LEFT'
@@ -99,8 +99,8 @@ layers:
   - PAGE DOWN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BACKSPACE
-  - DELETE
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -134,7 +134,7 @@ layers:
   - ''
   - ''
   - ''
-  - BACKSPACE
+  - DELETE
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -160,8 +160,8 @@ layers:
   - '>'
   - '~'
   - {t: ▽, type: trans}
-  - BACKSPACE
-  - DELETE
+  - ''
+  - ''
   - ''
   - ''
   - CAPSLOCK
@@ -177,7 +177,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -195,7 +195,7 @@ layers:
   - /
   - '*'
   - '-'
-  - BACKSPACE
+  - DELETE
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -207,7 +207,7 @@ layers:
   - '8'
   - '9'
   - +
-  - DELETE
+  - ''
   - {t: ▽, type: trans}
   - ''
   - '&fz_left'
@@ -221,8 +221,8 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BACKSPACE
-  - DELETE
+  - raise
+  - ''
   - '&fz_cal'
   - ''
   - ''
