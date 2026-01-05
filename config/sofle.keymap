@@ -118,10 +118,10 @@
 &kp TAB         &kp Q   &kp W         &kp E         &kp R   &kp T                                          &kp Y      &kp U   &kp I          &kp O      &kp P     &kp F12
 &kp LEFT_SHIFT  &kp A   &kp S         &kp D         &kp F   &kp G                                          &kp H      &kp J   &kp K          &kp L      &kp SEMI  &mt RIGHT_SHIFT SQT
 &kp LCTRL       &kp Z   &kp X         &kp C         &kp V   &kp B      &kp C_MUTE               &none      &kp N      &kp M   &kp COMMA      &kp DOT    &kp FSLH  &kp RCTRL
-                        &kp LEFT_WIN  &kp LEFT_ALT  &mo 3   &kp SPACE  &mo 2                    &kp ENTER  &kp SPACE  &mo 1   &kp RIGHT_ALT  &kp K_APP
+                        &kp LEFT_WIN  &kp LEFT_ALT  &mo 3   &kp SPACE  &kp BACKSPACE            &kp ENTER  &kp SPACE  &mo 1   &kp RIGHT_ALT  &kp K_APP
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -136,14 +136,14 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &none          &none                &none            &none              &none                       &none     &none           &none           &none      &none          &kp BACKSPACE
-&trans  &none          &msc SCRL_DOWN       &mmv MOVE_UP     &msc SCRL_UP       &none                       &kp HOME  &none           &kp UP_ARROW    &none      &kp PAGE_UP    &kp DELETE
+&trans  &none          &none                &none            &none              &none                       &none     &none           &none           &none      &none          &kp DELETE
+&trans  &none          &msc SCRL_DOWN       &mmv MOVE_UP     &msc SCRL_UP       &none                       &kp HOME  &none           &kp UP_ARROW    &none      &kp PAGE_UP    &none
 &trans  &none          &mmv MOVE_LEFT       &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none                       &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &trans
-&trans  &kp BACKSPACE  &kp DELETE           &none            &none              &none   &trans      &trans  &none     &mkp LCLK       &mkp MCLK       &mkp RCLK  &none          &trans
+&trans  &none          &none                &none            &none              &none   &trans      &trans  &none     &mkp LCLK       &mkp MCLK       &mkp RCLK  &none          &trans
                        &trans               &trans           &trans             &trans  &trans      &trans  &trans    &trans          &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
@@ -157,22 +157,22 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &none             &none            &none           &none         &none                                         &none         &none          &none                 &none                  &none             &kp BACKSPACE
-&trans  &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                               &kp ASTERISK  &kp PIPE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION   &kp MINUS
-&trans  &none             &none            &kp PAUSE_BREAK    &kp INSERT    &kp PRINTSCREEN                            &kp EQUAL     &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp TILDE
-&trans  &kp BACKSPACE     &kp DELETE       &none              &none         &kp CAPSLOCK     &bt BT_CLR         &trans  &none         &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &trans
+&trans  &none             &none            &none           &none         &none                                          &none         &none          &none                 &none                  &none             &kp DELETE
+&trans  &bt BT_SEL 0      &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                                &kp ASTERISK  &kp PIPE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EXCLAMATION   &kp MINUS
+&trans  &none             &none            &kp PAUSE_BREAK    &kp INSERT    &kp PRINTSCREEN                             &kp EQUAL     &kp LESS_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp TILDE
+&trans  &none             &none            &none              &none         &kp CAPSLOCK     &bt BT_CLR         &trans  &none         &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none             &trans
                           &trans           &trans             &trans        &trans           &trans             &trans  &trans        &trans         &trans                &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_4 {
             bindings = <
-&trans  &none          &none       &none    &none      &none                     &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp BACKSPACE
-&trans  &none          &none       &none    &none      &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &kp DELETE
+&trans  &none          &none       &none    &none      &none                     &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp DELETE
+&trans  &none          &none       &none    &none      &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &none 
 &trans  &none          &fz_left    &fz_mid  &fz_right  &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &trans
-&trans  &kp BACKSPACE  &kp DELETE  &fz_cal  &none      &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+&trans  &mo 2          &none       &fz_cal  &none      &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
                        &trans      &trans   &trans     &trans  &trans    &trans  &trans  &kp NUMBER_0  &kp PERIOD    &none
             >;
         };
