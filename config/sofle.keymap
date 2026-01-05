@@ -138,7 +138,7 @@
             bindings = <
 &trans  &none          &none                &none            &none              &none                       &none     &none           &none           &none      &none          &kp DELETE
 &trans  &none          &msc SCRL_DOWN       &mmv MOVE_UP     &msc SCRL_UP       &none                       &kp HOME  &none           &kp UP_ARROW    &none      &kp PAGE_UP    &none
-&trans  &none          &mmv MOVE_LEFT       &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none                       &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &trans
+&trans  &none          &mmv MOVE_LEFT       &mmv MOVE_DOWN   &mmv MOVE_RIGHT    &none                       &kp END   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp PAGE_DOWN  &kp RIGHT_SHIFT
 &trans  &none          &none                &none            &none              &none   &trans      &trans  &none     &mkp LCLK       &mkp MCLK       &mkp RCLK  &none          &trans
                        &trans               &trans           &trans             &trans  &trans      &trans  &trans    &trans          &trans          &trans
             >;
@@ -171,7 +171,7 @@
             bindings = <
 &trans  &none          &none       &none    &none      &none                     &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp DELETE
 &trans  &none          &none       &none    &none      &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &none 
-&trans  &none          &fz_left    &fz_mid  &fz_right  &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &trans
+&trans  &none          &fz_left    &fz_mid  &fz_right  &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &kp RIGHT_SHIFT
 &trans  &none          &none       &fz_cal  &none      &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
                        &trans      &trans   &trans     &trans  &trans    &trans  &trans  &kp NUMBER_0  &kp PERIOD    &none
             >;
