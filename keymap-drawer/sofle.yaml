@@ -55,8 +55,8 @@ layers:
   - LEFT ALT
   - raise
   - SPACE
-  - BACKSPACE
   - ENTER
+  - BACKSPACE
   - SPACE
   - lower
   - RIGHT ALT
