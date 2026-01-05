@@ -97,7 +97,7 @@ layers:
   - DOWN ARROW
   - RIGHT
   - PAGE DOWN
-  - {t: ▽, type: trans}
+  - RIGHT SHIFT
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -219,7 +219,7 @@ layers:
   - '5'
   - '6'
   - ''
-  - {t: ▽, type: trans}
+  - RIGHT SHIFT
   - {t: ▽, type: trans}
   - {type: held}
   - ''
