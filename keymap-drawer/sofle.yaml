@@ -167,11 +167,11 @@ layers:
   - CAPSLOCK
   - BT CLR
   - {t: ▽, type: trans}
-  - ''
+  - '`'
   - '&'
   - '{'
   - '}'
-  - ''
+  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
