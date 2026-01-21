@@ -222,10 +222,10 @@ layers:
   - RIGHT SHIFT
   - {t: ▽, type: trans}
   - {type: held}
-  - ''
+  - LCTRL
+  - LEFT SHIFT
+  - LEFT ALT
   - '&fz_cal'
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
@@ -242,5 +242,5 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
-  - .
+  - '0'
   - ''
