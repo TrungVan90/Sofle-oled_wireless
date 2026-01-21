@@ -169,11 +169,11 @@
 
         layer_4 {
             bindings = <
-&trans  &none          &none       &none    &none      &none                     &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp DELETE
-&trans  &none          &none       &none    &none      &none                     &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &none 
-&trans  &none          &fz_left    &fz_mid  &fz_right  &none                     &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &kp RIGHT_SHIFT
-&trans  &none          &none       &fz_cal  &none      &none   &trans    &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
-                       &trans      &trans   &trans     &trans  &trans    &trans  &trans  &kp NUMBER_0  &kp PERIOD    &none
+&trans  &none          &none       &none               &none             &none                                                 &none   &none         &kp SLASH     &kp ASTERISK  &kp MINUS  &kp DELETE
+&trans  &none          &none       &none               &none             &none                                                 &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &none 
+&trans  &none          &fz_left    &fz_mid             &fz_right         &none                                                 &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none      &kp RIGHT_SHIFT
+&trans  &none          &kp LCTRL   &kp LEFT_SHIFT      &kp LEFT_ALT      &fz_cal           &trans                      &trans  &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &trans
+                       &trans      &trans              &trans            &trans            &trans                      &trans  &trans  &kp NUMBER_0  &kp NUMBER_0  &none
             >;
         };
     };
