@@ -54,10 +54,10 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - raise
-  - SPACE
+  - {t: SPACE, h: '4'}
   - ENTER
   - BACKSPACE
-  - {t: SPACE, h: '4'}
+  - SPACE
   - lower
   - RIGHT ALT
   - APP
@@ -237,10 +237,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
   - '0'
   - .
