@@ -56,9 +56,9 @@ layers:
   - raise
   - {t: SPACE, h: '4'}
   - ENTER
-  - lower
-  - SPACE
   - BACKSPACE
+  - {t: SPACE, h: lower}
+  - ''
   - RIGHT ALT
   - APP
   lower:
@@ -117,8 +117,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
