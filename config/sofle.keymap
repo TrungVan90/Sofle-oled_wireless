@@ -121,29 +121,158 @@
                 <&kp ENTER>;
         };
 
-        // Macro gửi Ctrl+Alt+Shift+L để trigger AutoHotkey notification
-
-        notify_lower: notify_lower {
-            label = "NOTIFY_LOWER";
-            compatible = "zmk,behavior-macro";
+        // Tap-dance cho số 1-12 thành F1-F10
+        td_1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp L>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp F1>;
+        };
+
+        td_2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N2>, <&kp F2>;
+        };
+
+        td_3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N3>, <&kp F3>;
+        };
+
+        td_4: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N4>, <&kp F4>;
+        };
+
+        td_5: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N5>, <&kp F5>;
+        };
+
+        td_6: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N6>, <&kp F6>;
+        };
+
+        td_7: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N7>, <&kp F7>;
+        };
+
+        td_8: tap_dance_8 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N8>, <&kp F8>;
+        };
+
+        td_9: tap_dance_9 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N9>, <&kp F9>;
+        };
+
+        td_0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N0>, <&kp F10>;
         };
     };
+
+    combos {
+        compatible = "zmk,combos";
+
+        // R + Mo(1) → ESC (khi LOWER active)
+        combo_r_lower_esc {
+            timeout-ms = <50>;
+            key-positions = <4 44>;  // R + Space (mo LOWER via space_layer)
+            bindings = <&kp ESC>;
+            layers = <1>;  // Chỉ hoạt động khi ở layer LOWER
+        };
+
+        // F + Mo(1) → Shift (khi LOWER active)
+        combo_f_lower_shift {
+            timeout-ms = <50>;
+            key-positions = <16 44>;  // F + Space (mo LOWER via space_layer)
+            bindings = <&kp LSHFT>;
+            layers = <1>;
+        };
+
+        // J + Space → RShift
+        combo_j_space_rshift {
+            timeout-ms = <50>;
+            key-positions = <19 44>;  // J + Space
+            bindings = <&kp RSHFT>;
+        };
+
+        // D + Mo(1) → Ctrl (khi LOWER active)
+        combo_d_lower_ctrl {
+            timeout-ms = <50>;
+            key-positions = <15 44>;  // D + Space (mo LOWER via space_layer)
+            bindings = <&kp LCTRL>;
+            layers = <1>;
+        };
+
+        // K + Space → RCtrl
+        combo_k_space_rctrl {
+            timeout-ms = <50>;
+            key-positions = <20 44>;  // K + Space
+            bindings = <&kp RCTRL>;
+        };
+
+        // S + Mo(1) → Alt (khi LOWER active)
+        combo_s_lower_alt {
+            timeout-ms = <50>;
+            key-positions = <14 44>;  // S + Space (mo LOWER via space_layer)
+            bindings = <&kp LALT>;
+            layers = <1>;
+        };
+
+        // L + Space → RAlt
+        combo_l_space_ralt {
+            timeout-ms = <50>;
+            key-positions = <21 44>;  // L + Space
+            bindings = <&kp RALT>;
+        };
+
+        // G + Mo(1) → Enter (khi LOWER active)
+        combo_g_lower_enter {
+            timeout-ms = <50>;
+            key-positions = <17 44>;  // G + Space (mo LOWER via space_layer)
+            bindings = <&kp ENTER>;
+            layers = <1>;
+        };
+
+        // ; + Space → To Layer 2
+        combo_semi_space_layer2 {
+            timeout-ms = <50>;
+            key-positions = <22 44>;  // ; + Space
+            bindings = <&to 2>;
+        };
+
+        // A + Mo(1) → To Layer 3 (khi LOWER active)
+        combo_a_lower_layer3 {
+            timeout-ms = <50>;
+            key-positions = <13 44>;  // A + Space (mo LOWER via space_layer)
+            bindings = <&to 3>;
+            layers = <1>;
+        };
+    };
+};
 
     keymap {
         compatible = "zmk,keymap";
