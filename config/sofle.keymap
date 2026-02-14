@@ -268,17 +268,17 @@
             layers = <4>;
         };
 
-        // ; + Space → To Layer 2
+        // ; + Space → To Layer 4
 
-        combo_semi_space_layer2 {
+        combo_semi_space_layer4 {
             timeout-ms = <50>;
             key-positions = <22 44>;  // ; + Space
-            bindings = <&to 1>;
+            bindings = <&to 4>;
         };
 
-        // A + Mo(1) → To Layer 3 (khi LOWER active)
+        // A + Mo(1) → To Layer 2 (khi LOWER active)
 
-        combo_a_lower_layer3 {
+        combo_a_lower_layer2 {
             timeout-ms = <50>;
             key-positions = <13 44>;  // A + Space (mo LOWER via space_layer)
             bindings = <&to 2>;
@@ -335,7 +335,7 @@
             label = "numpad";
             bindings = <
 &trans  &none     &none         &none      &none           &none                               &none    &none  &none         &none    &none          &none
-&trans  &kp CAPS  &none         &kp TAB    &kp ESCAPE      &kp DEL                             &kp F12  &td_7  &td_8         &td_9    &none          &none
+&trans  &none     &none         &none      &none           &none                               &kp F12  &td_7  &td_8         &td_9    &none          &none
 &trans  &none     &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                           &kp DOT  &td_4  &td_5         &td_6    &kp SQT        &none
 &trans  &kp LGUI  &none         &none      &none           &none      &trans    &trans         &kp F11  &td_1  &td_2         &td_3    &kp BACKSLASH  &none
                   &trans        &trans     &trans          &trans     &trans    &kp BACKSPACE  &trans   &td_0  &kp NUMBER_0  &kp DOT
@@ -356,8 +356,8 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &none  &none         &none      &none           &none                     &none   &none           &none           &none          &none  &none
-&trans  &none  &none         &none      &none           &none                     &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none  &none
+&trans  &none     &none         &none      &none           &none                     &none   &none           &none           &none          &none  &none
+&trans  &kp CAPS  &none         &kp TAB    &kp ESCAPE      &kp DEL                   &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none  &none
 &trans  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &none  &none
 &trans  &none  &none         &none      &none           &none   &trans    &trans  &none   &kp HOME        &none           &kp END        &none  &trans
                &trans        &trans     &trans          &trans  &trans    &trans  &trans  &trans          &trans          &trans
