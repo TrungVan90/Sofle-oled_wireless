@@ -199,11 +199,11 @@
     combos {
         compatible = "zmk,combos";
 
-// R + Mo(1) → ESC (khi LOWER active)
+        // R + Mo(1) → ESC (khi LOWER active)
 
         combo_r_lower_esc {
             timeout-ms = <50>;
-            key-positions = <4 44>;  // R + Space (mo LOWER via space_layer)
+            key-positions = <54 16>;  // R + Space (mo LOWER via space_layer)
             bindings = <&kp ESC>;
             layers = <4>;  // Chỉ hoạt động khi ở layer LOWER
         };
@@ -212,7 +212,7 @@
 
         combo_f_lower_shift {
             timeout-ms = <50>;
-            key-positions = <16 44>;  // F + Space (mo LOWER via space_layer)
+            key-positions = <54 28>;  // F + Space (mo LOWER via space_layer)
             bindings = <&kp LSHFT>;
             layers = <4>;
         };
@@ -221,7 +221,7 @@
 
         combo_j_space_rshift {
             timeout-ms = <50>;
-            key-positions = <19 44>;  // J + Space
+            key-positions = <55 31>;  // J + Space
             bindings = <&kp RSHFT>;
         };
 
@@ -229,7 +229,7 @@
 
         combo_d_lower_ctrl {
             timeout-ms = <50>;
-            key-positions = <15 44>;  // D + Space (mo LOWER via space_layer)
+            key-positions = <54 27>;  // D + Space (mo LOWER via space_layer)
             bindings = <&kp LCTRL>;
             layers = <4>;
         };
@@ -238,7 +238,7 @@
 
         combo_k_space_rctrl {
             timeout-ms = <50>;
-            key-positions = <20 44>;  // K + Space
+            key-positions = <55 32>;  // K + Space
             bindings = <&kp RCTRL>;
         };
 
@@ -246,7 +246,7 @@
 
         combo_s_lower_alt {
             timeout-ms = <50>;
-            key-positions = <14 44>;  // S + Space (mo LOWER via space_layer)
+            key-positions = <54 26>;  // S + Space (mo LOWER via space_layer)
             bindings = <&kp LALT>;
             layers = <4>;
         };
@@ -255,7 +255,7 @@
 
         combo_l_space_ralt {
             timeout-ms = <50>;
-            key-positions = <21 44>;  // L + Space
+            key-positions = <55 33>;  // L + Space
             bindings = <&kp RALT>;
         };
 
@@ -263,17 +263,16 @@
 
         combo_g_lower_enter {
             timeout-ms = <50>;
-            key-positions = <17 44>;  // G + Space (mo LOWER via space_layer)
+            key-positions = <54 29>;  // G + Space (mo LOWER via space_layer)
             bindings = <&kp ENTER>;
             layers = <4>;
         };
-
 
         // ; + Space → To Layer 4
 
         combo_semi_space_layer4 {
             timeout-ms = <50>;
-            key-positions = <22 44>;  // ; + Space
+            key-positions = <55 34>;  // ; + Space
             bindings = <&to 4>;
         };
 
@@ -281,7 +280,7 @@
 
         combo_a_lower_layer2 {
             timeout-ms = <50>;
-            key-positions = <13 44>;  // A + Space (mo LOWER via space_layer)
+            key-positions = <54 25>;  // A + Space (mo LOWER via space_layer)
             bindings = <&to 2>;
             layers = <4>;
         };
