@@ -55,8 +55,8 @@ layers:
   - LEFT ALT
   - numb
   - SPACE
-  - {t: arrow, h: toggle}
-  - ENTER
+  - arrow
+  - {t: SPACE, h: raise}
   - SPACE
   - raise
   - RIGHT ALT
@@ -75,11 +75,11 @@ layers:
   - ''
   - BACKSPACE
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - {t: arrow, h: toggle}
+  - ''
+  - TAB
+  - ESC
+  - DELETE
   - '*'
   - '|'
   - (
@@ -87,11 +87,11 @@ layers:
   - '!'
   - '-'
   - {t: ▽, type: trans}
-  - CALC
-  - ''
-  - ''
-  - ''
-  - PRINTSCREEN
+  - CAPSLOCK
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ENTER
   - '='
   - <
   - '['
@@ -99,11 +99,11 @@ layers:
   - '>'
   - '~'
   - {t: ▽, type: trans}
-  - DELETE
-  - BACKSPACE
+  - LEFT WIN
   - ''
   - ''
-  - CAPSLOCK
+  - ''
+  - ''
   - BT CLR
   - {t: ▽, type: trans}
   - ''
@@ -117,9 +117,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: BACKSPACE, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   arrow:
@@ -177,10 +177,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   numb:
@@ -192,37 +192,37 @@ layers:
   - ''
   - ''
   - ''
-  - /
-  - '*'
-  - '-'
-  - BACKSPACE
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
+  - {t: raise, h: toggle}
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - TAB
+  - ESCAPE
+  - DELETE
+  - '`'
   - '7'
   - '8'
   - '9'
-  - +
-  - DELETE
+  - ''
+  - ''
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - CAPSLOCK
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ENTER
   - ''
   - '4'
   - '5'
   - '6'
+  - ''''
   - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - DELETE
-  - BACKSPACE
+  - LGUI
+  - ''
   - ''
   - ''
   - ''
@@ -232,15 +232,15 @@ layers:
   - '1'
   - '2'
   - '3'
+  - \
   - ''
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BACKSPACE
   - {t: ▽, type: trans}
   - '0'
-  - .
+  - ''
   - ''
