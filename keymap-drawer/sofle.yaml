@@ -77,11 +77,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - CAPS
   - ''
-  - TAB
-  - ESCAPE
-  - DEL
+  - ''
+  - ''
+  - ''
+  - ''
   - F12
   - '&td_7'
   - '&td_8'
@@ -138,11 +138,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
+  - CAPS
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - TAB
+  - ESCAPE
+  - DEL
   - ''
   - PG UP
   - UP ARROW
@@ -269,7 +269,7 @@ combos:
   k: ENTER
   l: ['4']
 - p: [22, 44]
-  k: {t: raise, h: toggle}
+  k: {t: '4', h: toggle}
 - p: [13, 44]
   k: {t: numpad, h: toggle}
   l: ['4']
