@@ -1,127 +1,7 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default:
-  - ESC
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - F12
-  - LEFT SHIFT
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
-  - {t: '''', h: RIGHT SHIFT}
-  - LCTRL
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - MUTE
-  - ''
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - RCTRL
-  - LEFT WIN
-  - LEFT ALT
-  - raise
-  - {t: SPACE, h: numpad}
-  - ENTER
-  - BACKSPACE
-  - {t: SPACE, h: lower}
-  - ''
-  - RIGHT ALT
-  - APP
-  lower:
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - DELETE
-  - {t: ▽, type: trans}
-  - ''
-  - '&msc SCRL_UP'
-  - '&mmv MOVE_UP'
-  - '&msc SCRL_DOWN'
-  - ''
-  - HOME
-  - ''
-  - UP ARROW
-  - ''
-  - PAGE UP
-  - ''
-  - {t: ▽, type: trans}
-  - ''
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_RIGHT'
-  - ''
-  - END
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT
-  - PAGE DOWN
-  - RIGHT SHIFT
-  - {t: ▽, type: trans}
-  - ''
-  - '&msc SCRL_LEFT'
-  - ''
-  - '&msc SCRL_RIGHT'
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  default: ['', '', '', '', '', '', '', '', '', '', '', '', '', Q, W, E, R, T, Y, U, I, O, P, '', '', A, S, D, F, G, H, J, K, L, ;, '', '', Z, X, C, V, B, MUTE, '',
+    N, M, ',', ., /, '', '', '', '', '', lower, SPACE, raise, '', '', '']
   raise:
   - {t: ▽, type: trans}
   - ''
@@ -134,37 +14,37 @@ layers:
   - ''
   - ''
   - ''
-  - DELETE
+  - ''
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - '!'
   - '|'
+  - '*'
   - (
   - )
-  - '*'
-  - KP DIVIDE
-  - {t: ▽, type: trans}
+  - /
   - ''
+  - {t: ▽, type: trans}
   - '&fz_cal'
-  - PAUSE BREAK
-  - INSERT
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
   - PRINTSCREEN
   - '='
-  - '#'
+  - +
   - '['
   - ']'
-  - +
   - '-'
+  - ''
   - {t: ▽, type: trans}
   - ''
   - '&fz_left'
   - '&fz_mid'
   - '&fz_right'
-  - CAPSLOCK
+  - ''
   - BT CLR
   - {t: ▽, type: trans}
   - '`'
@@ -175,11 +55,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -195,7 +75,56 @@ layers:
   - ''
   - ''
   - ''
-  - DELETE
+  - ''
+  - {t: ▽, type: trans}
+  - CAPS
+  - ''
+  - TAB
+  - ESCAPE
+  - DEL
+  - F12
+  - '&td_7'
+  - '&td_8'
+  - '&td_9'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ENTER
+  - .
+  - '&td_4'
+  - '&td_5'
+  - '&td_6'
+  - ''''
+  - ''
+  - {t: ▽, type: trans}
+  - LGUI
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - '&td_1'
+  - '&td_2'
+  - '&td_3'
+  - \
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BACKSPACE
+  - {t: ▽, type: trans}
+  - '&td_0'
+  - '0'
+  - .
+  lower:
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -203,9 +132,33 @@ layers:
   - ''
   - ''
   - ''
-  - '7'
-  - '8'
-  - '9'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PG UP
+  - UP ARROW
+  - PAGE DOWN
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ''
+  - ''
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -214,25 +167,14 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - '4'
-  - '5'
-  - '6'
-  - ''
-  - RIGHT SHIFT
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - '1'
-  - '2'
-  - '3'
+  - HOME
   - ''
+  - END
+  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -241,33 +183,93 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
-  - '0'
-  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  '4':
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&msc SCRL_UP'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_DOWN'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RSHFT
+  - RCTRL
+  - RIGHT ALT
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&msc SCRL_LEFT'
+  - {t: ▽, type: trans}
+  - '&msc SCRL_RIGHT'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [4, 44]
   k: ESC
-  l: [lower]
+  l: ['4']
 - p: [16, 44]
   k: LSHFT
-  l: [lower]
+  l: ['4']
 - p: [19, 44]
   k: RSHFT
 - p: [15, 44]
   k: LCTRL
-  l: [lower]
+  l: ['4']
 - p: [20, 44]
   k: RCTRL
 - p: [14, 44]
   k: LALT
-  l: [lower]
+  l: ['4']
 - p: [21, 44]
   k: RALT
 - p: [17, 44]
   k: ENTER
-  l: [lower]
+  l: ['4']
 - p: [22, 44]
   k: {t: raise, h: toggle}
 - p: [13, 44]
   k: {t: numpad, h: toggle}
-  l: [lower]
+  l: ['4']
