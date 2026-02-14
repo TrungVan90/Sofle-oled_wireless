@@ -7,7 +7,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Cấu hình tốc độ mouse (PHẢI đặt TRƯỚC include pointing.h)
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // Tốc độ di chuyển (default: 600)
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // Tốc độ scroll (default: 10)
 
@@ -17,9 +16,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define ADJUST 3
+#define RAISE 1
+#define NUMPAD 2
+#define LOWER 3
+#define MOUSE 4
 
 / {
     behaviors {
@@ -34,27 +34,18 @@
     };
 
     macros {
-        // Window management macros
-
         fz_left: fz_left {
             label = "FZ_LEFT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N1>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LCTRL>,
-                <&macro_release>,
-                <&kp LGUI>;
+                <&macro_press>, <&kp LGUI>,
+                <&macro_press>, <&kp LCTRL>,
+                <&macro_press>, <&kp LALT>,
+                <&macro_tap>, <&kp N1>,
+                <&macro_release>, <&kp LALT>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_release>, <&kp LGUI>;
         };
 
         fz_mid: fz_mid {
@@ -62,20 +53,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LCTRL>,
-                <&macro_release>,
-                <&kp LGUI>;
+                <&macro_press>, <&kp LGUI>,
+                <&macro_press>, <&kp LCTRL>,
+                <&macro_press>, <&kp LALT>,
+                <&macro_tap>, <&kp N2>,
+                <&macro_release>, <&kp LALT>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_release>, <&kp LGUI>;
         };
 
         fz_right: fz_right {
@@ -83,20 +67,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp N3>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LCTRL>,
-                <&macro_release>,
-                <&kp LGUI>;
+                <&macro_press>, <&kp LGUI>,
+                <&macro_press>, <&kp LCTRL>,
+                <&macro_press>, <&kp LALT>,
+                <&macro_tap>, <&kp N3>,
+                <&macro_release>, <&kp LALT>,
+                <&macro_release>, <&kp LCTRL>,
+                <&macro_release>, <&kp LGUI>;
         };
 
         fz_cal: fz_cal {
@@ -104,26 +81,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp R>,
-                <&macro_release>,
-                <&kp LGUI>,
+                <&macro_press>, <&kp LGUI>,
+                <&macro_tap>, <&kp R>,
+                <&macro_release>, <&kp LGUI>,
                 <&macro_pause_for_release>,
-                <&macro_tap>,
-                <&kp C>,
-                <&macro_tap>,
-                <&kp A>,
-                <&macro_tap>,
-                <&kp L>,
-                <&macro_tap>,
-                <&kp C>,
-                <&macro_tap>,
-                <&kp ENTER>;
+                <&macro_tap>, <&kp C>,
+                <&macro_tap>, <&kp A>,
+                <&macro_tap>, <&kp L>,
+                <&macro_tap>, <&kp C>,
+                <&macro_tap>, <&kp ENTER>;
         };
-
-        // Tap-dance cho số 1-12 thành F1-F10
 
         td_1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -199,90 +166,92 @@
     combos {
         compatible = "zmk,combos";
 
-        // R + Mo(1) → ESC (khi LOWER active)
-
-        combo_r_lower_esc {
-            timeout-ms = <50>;
-            key-positions = <4 44>;  // R + Space (mo LOWER via space_layer)
-            bindings = <&kp ESC>;
-            layers = <4>;  // Chỉ hoạt động khi ở layer LOWER
-        };
-
-        // F + Mo(1) → Shift (khi LOWER active)
-
-        combo_f_lower_shift {
-            timeout-ms = <50>;
-            key-positions = <16 44>;  // F + Space (mo LOWER via space_layer)
-            bindings = <&kp LSHFT>;
-            layers = <4>;
-        };
+        // ===== Combo ở mọi layer (tay phải + Space) =====
 
         // J + Space → RShift
-
         combo_j_space_rshift {
             timeout-ms = <50>;
-            key-positions = <19 44>;  // J + Space
+            key-positions = <19 55>;  // J=19, Space=55
             bindings = <&kp RSHFT>;
         };
 
-        // D + Mo(1) → Ctrl (khi LOWER active)
-
-        combo_d_lower_ctrl {
-            timeout-ms = <50>;
-            key-positions = <15 44>;  // D + Space (mo LOWER via space_layer)
-            bindings = <&kp LCTRL>;
-            layers = <4>;
-        };
-
         // K + Space → RCtrl
-
         combo_k_space_rctrl {
             timeout-ms = <50>;
-            key-positions = <20 44>;  // K + Space
+            key-positions = <20 55>;  // K=20, Space=55
             bindings = <&kp RCTRL>;
         };
 
-        // S + Mo(1) → Alt (khi LOWER active)
-
-        combo_s_lower_alt {
-            timeout-ms = <50>;
-            key-positions = <14 44>;  // S + Space (mo LOWER via space_layer)
-            bindings = <&kp LALT>;
-            layers = <4>;
-        };
-
         // L + Space → RAlt
-
         combo_l_space_ralt {
             timeout-ms = <50>;
-            key-positions = <21 44>;  // L + Space
+            key-positions = <21 55>;  // L=21, Space=55
             bindings = <&kp RALT>;
         };
 
-        // G + Mo(1) → Enter (khi LOWER active)
-
-        combo_g_lower_enter {
-            timeout-ms = <50>;
-            key-positions = <17 44>;  // G + Space (mo LOWER via space_layer)
-            bindings = <&kp ENTER>;
-            layers = <4>;
-        };
-
-        // ; + Space → To Layer 4
-
+        // ; + Space → To Mouse Layer
         combo_semi_space_layer4 {
             timeout-ms = <50>;
-            key-positions = <22 44>;  // ; + Space
-            bindings = <&to 4>;
+            key-positions = <22 55>;  // ;=22, Space=55
+            bindings = <&to MOUSE>;
         };
 
-        // A + Mo(1) → To Layer 2 (khi LOWER active)
+        // ===== Combo chỉ ở Mouse layer (layer 4) =====
 
-        combo_a_lower_layer2 {
+        // R + Space → ESC
+        combo_r_esc {
             timeout-ms = <50>;
-            key-positions = <13 44>;  // A + Space (mo LOWER via space_layer)
-            bindings = <&to 2>;
-            layers = <4>;
+            key-positions = <4 55>;  // R=4, Space=55
+            bindings = <&kp ESC>;
+            layers = <MOUSE>;
+        };
+
+        // F + Space → LShift
+        combo_f_shift {
+            timeout-ms = <50>;
+            key-positions = <16 55>;  // F=16, Space=55
+            bindings = <&kp LSHFT>;
+            layers = <MOUSE>;
+        };
+
+        // D + Space → LCtrl
+        combo_d_ctrl {
+            timeout-ms = <50>;
+            key-positions = <15 55>;  // D=15, Space=55
+            bindings = <&kp LCTRL>;
+            layers = <MOUSE>;
+        };
+
+        // S + Space → LAlt
+        combo_s_alt {
+            timeout-ms = <50>;
+            key-positions = <14 55>;  // S=14, Space=55
+            bindings = <&kp LALT>;
+            layers = <MOUSE>;
+        };
+
+        // G + Space → Enter
+        combo_g_enter {
+            timeout-ms = <50>;
+            key-positions = <17 55>;  // G=17, Space=55
+            bindings = <&kp ENTER>;
+            layers = <MOUSE>;
+        };
+
+        // A + Space → To Numpad Layer
+        combo_a_numpad {
+            timeout-ms = <50>;
+            key-positions = <13 55>;  // A=13, Space=55
+            bindings = <&to NUMPAD>;
+            layers = <MOUSE>;
+        };
+
+        // Q + Space → To Base Layer (quay về từ Mouse)
+        combo_q_base_from_mouse {
+            timeout-ms = <50>;
+            key-positions = <13 55>;  // Q=13, Space=55  
+            bindings = <&to BASE>;
+            layers = <NUMPAD>;
         };
     };
 
@@ -291,20 +260,12 @@
 
         default_layer {
             label = "default";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
-
-            bindings = <
+            bindings = 
 &none  &none  &none  &none  &none  &none                           &none  &none  &none      &none    &none     &none
 &none  &kp Q  &kp W  &kp E  &kp R  &kp T                           &kp Y  &kp U  &kp I      &kp O    &kp P     &none
 &none  &kp A  &kp S  &kp D  &kp F  &kp G                           &kp H  &kp J  &kp K      &kp L    &kp SEMI  &none
 &none  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp C_MUTE    &none      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-              &none  &none  &none  &none  &mo 3         &kp SPACE  &mo 1  &none  &none      &none
+              &none  &none  &none  &none  &mo LOWER     &kp SPACE  &mo RAISE  &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -312,15 +273,7 @@
 
         raise_layer {
             label = "raise";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //                |      |       |       |      |      |  |      |      |      |       |      |
-
-            bindings = <
+            bindings = 
 &trans  &none         &none         &none         &none           &none                                  &none      &none          &none                 &none                  &none      &none
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4                           &kp PIPE   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
 &trans  &fz_cal       &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp PRINTSCREEN                        &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
@@ -333,7 +286,7 @@
 
         numpad_layer {
             label = "numpad";
-            bindings = <
+            bindings = 
 &trans  &none     &none         &none      &none           &none                               &none    &none  &none         &none    &none          &none
 &trans  &none     &none         &none      &none           &none                               &kp F12  &td_7  &td_8         &td_9    &none          &none
 &trans  &none     &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                           &kp DOT  &td_4  &td_5         &td_6    &kp SQT        &none
@@ -346,28 +299,20 @@
 
         lower_layer {
             label = "lower";
-
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
-
-            bindings = <
+            bindings = 
 &trans  &none     &none         &none      &none           &none                     &none   &none           &none           &none          &none  &none
 &trans  &kp CAPS  &none         &kp TAB    &kp ESCAPE      &kp DEL                   &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none  &none
-&trans  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &none  &none
-&trans  &none  &none         &none      &none           &none   &trans    &trans  &none   &kp HOME        &none           &kp END        &none  &trans
-               &trans        &trans     &trans          &trans  &trans    &trans  &trans  &trans          &trans          &trans
+&trans  &none     &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &none  &none
+&trans  &none     &none         &none      &none           &none   &trans    &trans  &none   &kp HOME        &none           &kp END        &none  &trans
+                  &trans        &trans     &trans          &trans  &trans    &trans  &trans  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        layer_4 {
-            bindings = <
+        mouse_layer {
+            label = "mouse";
+            bindings = 
 &trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans     &trans     &trans         &trans  &trans
 &trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                    &trans  &trans     &trans     &trans         &trans  &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                    &trans  &kp RSHFT  &kp RCTRL  &kp RIGHT_ALT  &none   &trans
