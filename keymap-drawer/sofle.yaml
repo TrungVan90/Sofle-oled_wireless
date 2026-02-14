@@ -54,7 +54,7 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - raise
-  - {t: SPACE, h: '4'}
+  - {t: SPACE, h: numpad}
   - ENTER
   - BACKSPACE
   - {t: SPACE, h: lower}
@@ -183,7 +183,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '4':
+  numpad:
   - {t: ▽, type: trans}
   - ''
   - ''
@@ -244,3 +244,30 @@ layers:
   - '0'
   - '0'
   - .
+combos:
+- p: [4, 44]
+  k: ESC
+  l: [lower]
+- p: [16, 44]
+  k: LSHFT
+  l: [lower]
+- p: [19, 44]
+  k: RSHFT
+- p: [15, 44]
+  k: LCTRL
+  l: [lower]
+- p: [20, 44]
+  k: RCTRL
+- p: [14, 44]
+  k: LALT
+  l: [lower]
+- p: [21, 44]
+  k: RALT
+- p: [17, 44]
+  k: ENTER
+  l: [lower]
+- p: [22, 44]
+  k: {t: raise, h: toggle}
+- p: [13, 44]
+  k: {t: numpad, h: toggle}
+  l: [lower]
