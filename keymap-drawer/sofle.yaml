@@ -122,8 +122,8 @@ layers:
   - BACKSPACE
   - {t: ▽, type: trans}
   - '&td_0'
-  - '0'
-  - .
+  - ''
+  - ''
   lower:
   - {t: ▽, type: trans}
   - ''
