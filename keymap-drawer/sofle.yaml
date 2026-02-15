@@ -1,7 +1,66 @@
 layout: {zmk_keyboard: sofle}
 layers:
-  default: ['', '', '', '', '', '', '', '', '', '', '', '', '', Q, W, E, R, T, Y, U, I, O, P, '', '', A, S, D, F, G, H, J, K, L, ;, '', '', Z, X, C, V, B, MUTE, '',
-    N, M, ',', ., /, '', '', '', '', '', lower, SPACE, raise, '', '', '']
+  default:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ''
+  - ''
+  - {t: A, h: LEFT WIN}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LEFT SHIFT}
+  - G
+  - H
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RIGHT ALT}
+  - {t: ;, h: RGUI}
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - MUTE
+  - ''
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ''
+  - ''
+  - ''
+  - ''
+  - numpad
+  - lower
+  - {t: SPACE, h: raise}
+  - '4'
+  - ''
+  - ''
+  - ''
   raise:
   - {t: ▽, type: trans}
   - ''
@@ -28,7 +87,7 @@ layers:
   - /
   - ''
   - {t: ▽, type: trans}
-  - '&fz_cal'
+  - LWIN
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
@@ -40,7 +99,7 @@ layers:
   - '-'
   - ''
   - {t: ▽, type: trans}
-  - ''
+  - '&fz_cal'
   - '&fz_left'
   - '&fz_mid'
   - '&fz_right'
@@ -58,8 +117,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -81,7 +140,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - DELETE
   - F12
   - '&td_7'
   - '&td_8'
@@ -89,7 +148,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - {type: held}
+  - LWIN
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
@@ -117,9 +176,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
-  - BACKSPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&td_0'
   - ''
@@ -142,7 +201,7 @@ layers:
   - ''
   - TAB
   - ESCAPE
-  - DEL
+  - DELETE
   - ''
   - PG UP
   - UP ARROW
@@ -150,11 +209,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - numpad
+  - LGUI
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
-  - ''
+  - ENTER
   - ''
   - LEFT ARROW
   - DOWN ARROW
@@ -162,7 +221,7 @@ layers:
   - ''''
   - ''
   - {t: ▽, type: trans}
-  - LGUI
+  - ''
   - ''
   - ''
   - ''
@@ -180,7 +239,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - BACKSPACE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -220,7 +279,7 @@ layers:
   - RSHFT
   - RCTRL
   - RIGHT ALT
-  - {type: held}
+  - RIGHT WIN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -241,39 +300,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-combos:
-- p: [54, 16]
-  k: ESC
-  l: [default]
-- p: [54, 28]
-  k: LSHFT
-  l: [default]
-- p: [55, 31]
-  k: RSHFT
-  l: [default]
-- p: [54, 27]
-  k: LCTRL
-  l: [default]
-- p: [55, 32]
-  k: RCTRL
-  l: [default]
-- p: [54, 26]
-  k: LALT
-  l: [default]
-- p: [55, 33]
-  k: RALT
-  l: [default]
-- p: [54, 29]
-  k: ENTER
-  l: [default]
-- p: [55, 34]
-  k: '4'
-  l: [default]
-- p: [54, 25]
-  k: numpad
-  l: [default]
