@@ -338,11 +338,11 @@
         numpad_layer {
             label = "numpad";
             bindings = <
-&trans  &none  &none         &none      &none           &none                               &none    &none  &none         &none    &none  &none
-&trans  &none  &none         &none      &none           &none                               &kp F12  &td_7  &td_8         &td_9    &none  &none
-&trans  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                           &kp DOT  &td_4  &td_5         &td_6    &none  &none
-&trans  &none  &none         &none      &none           &none      &trans    &trans         &kp F11  &td_1  &td_2         &td_3    &none  &none
-               &trans        &trans     &trans          &trans     &trans    &kp BACKSPACE  &trans   &td_0  &kp NUMBER_0  &kp DOT
+&trans  &none  &none         &none      &none           &none                               &none    &none  &none  &none  &none  &none
+&trans  &none  &none         &none      &none           &none                               &kp F12  &td_7  &td_8  &td_9  &none  &none
+&trans  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                           &kp DOT  &td_4  &td_5  &td_6  &none  &none
+&trans  &none  &none         &none      &none           &none      &trans    &trans         &kp F11  &td_1  &td_2  &td_3  &none  &none
+               &trans        &trans     &trans          &trans     &trans    &kp BACKSPACE  &trans   &td_0  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
