@@ -200,94 +200,15 @@
         compatible = "zmk,combos";
 
         // R + Mo(1) → ESC (khi LOWER active)
-
-        combo_r_esc {
-            timeout-ms = <50>;
-            key-positions = <54 16>;  // R + Space (mo LOWER via space_layer)
-            bindings = <&kp ESC>;
-            layers = <0>;  // Chỉ hoạt động khi ở layer LOWER
-        };
-
         // F + Mo(1) → Shift (khi LOWER active)
-
-        combo_f_shift {
-            timeout-ms = <50>;
-            key-positions = <54 28>;  // F + Space (mo LOWER via space_layer)
-            bindings = <&kp LSHFT>;
-            layers = <0>;
-        };
-
         // J + Space → RShift
-
-        combo_j_space_rshift {
-            timeout-ms = <50>;
-            key-positions = <55 31>;  // J + Space
-            bindings = <&kp RSHFT>;
-            layers = <0>;
-        };
-
         // D + Mo(1) → Ctrl (khi LOWER active)
-
-        combo_d_ctrl {
-            timeout-ms = <50>;
-            key-positions = <54 27>;  // D + Space (mo LOWER via space_layer)
-            bindings = <&kp LCTRL>;
-            layers = <0>;
-        };
-
         // K + Space → RCtrl
-
-        combo_k_space_rctrl {
-            timeout-ms = <50>;
-            key-positions = <55 32>;  // K + Space
-            bindings = <&kp RCTRL>;
-            layers = <0>;
-        };
-
         // S + Mo(1) → Alt (khi LOWER active)
-
-        combo_s_alt {
-            timeout-ms = <50>;
-            key-positions = <54 26>;  // S + Space (mo LOWER via space_layer)
-            bindings = <&kp LALT>;
-            layers = <0>;
-        };
-
         // L + Space → RAlt
-
-        combo_l_space_ralt {
-            timeout-ms = <50>;
-            key-positions = <55 33>;  // L + Space
-            bindings = <&kp RALT>;
-            layers = <0>;
-        };
-
         // G + Mo(1) → Enter (khi LOWER active)
-
-        combo_g_enter {
-            timeout-ms = <50>;
-            key-positions = <54 29>;  // G + Space (mo LOWER via space_layer)
-            bindings = <&kp ENTER>;
-            layers = <0>;
-        };
-
         // ; + Space → To Layer 4
-
-        combo_semi_space_layer4 {
-            timeout-ms = <50>;
-            key-positions = <55 34>;  // ; + Space
-            bindings = <&mo 4>;
-            layers = <0>;
-        };
-
         // A + Mo(1) → To Layer 2 (khi LOWER active)
-
-        combo_a_lower_layer2 {
-            timeout-ms = <50>;
-            key-positions = <54 25>;  // A + Space (mo LOWER via space_layer)
-            bindings = <&mo 2>;
-            layers = <0>;
-        };
     };
 
     keymap {
@@ -304,11 +225,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &none  &none  &none  &none  &none                           &none  &none  &none      &none    &none     &none
-&none  &kp Q  &kp W  &kp E  &kp R  &kp T                           &kp Y  &kp U  &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D  &kp F  &kp G                           &kp H  &kp J  &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp C_MUTE    &none      &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-              &none  &none  &none  &none  &mo 3         &kp SPACE  &mo 1  &none  &none      &none
+&none  &none           &none           &none        &none             &none                             &none  &none              &none        &none            &none          &none
+&none  &kp Q           &kp W           &kp E        &kp R             &kp T                             &kp Y  &kp U              &kp I        &kp O            &kp P          &none
+&none  &mt LEFT_WIN A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G                             &kp H  &mt RIGHT_SHIFT J  &mt RCTRL K  &mt RIGHT_ALT L  &mt RGUI SEMI  &none
+&none  &kp Z           &kp X           &kp C        &kp V             &kp B  &kp C_MUTE    &none        &kp N  &kp M              &kp COMMA    &kp DOT          &kp FSLH       &none
+                       &none           &none        &none             &mo 2  &mo 3         &lt 1 SPACE  &mo 4  &none              &none        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -327,8 +248,8 @@
             bindings = <
 &trans  &none         &none         &none         &none           &none                                  &none      &none          &none                 &none                  &none      &none
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4                           &kp PIPE   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
-&trans  &fz_cal       &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp PRINTSCREEN                        &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
-&trans  &none         &fz_left      &fz_mid       &fz_right       &none            &bt BT_CLR    &trans  &kp GRAVE  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
+&trans  &kp LWIN      &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp PRINTSCREEN                        &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
+&trans  &fz_cal       &fz_left      &fz_mid       &fz_right       &none            &bt BT_CLR    &trans  &kp GRAVE  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
                       &trans        &trans        &trans          &trans           &trans        &trans  &trans     &trans         &trans                &trans
             >;
 
@@ -338,11 +259,11 @@
         numpad_layer {
             label = "numpad";
             bindings = <
-&trans  &none  &none         &none      &none           &none                               &none    &none  &none  &none  &none  &none
-&trans  &none  &none         &none      &none           &none                               &kp F12  &td_7  &td_8  &td_9  &none  &none
-&trans  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                           &kp DOT  &td_4  &td_5  &td_6  &none  &none
-&trans  &none  &none         &none      &none           &none      &trans    &trans         &kp F11  &td_1  &td_2  &td_3  &none  &none
-               &trans        &trans     &trans          &trans     &trans    &kp BACKSPACE  &trans   &td_0  &none  &none
+&trans  &none     &none         &none      &none           &none                         &none    &none  &none  &none  &none  &none
+&trans  &none     &none         &none      &none           &kp DELETE                    &kp F12  &td_7  &td_8  &td_9  &none  &none
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &kp DOT  &td_4  &td_5  &td_6  &none  &none
+&trans  &none     &none         &none      &none           &none       &trans    &trans  &kp F11  &td_1  &td_2  &td_3  &none  &none
+                  &trans        &trans     &trans          &trans      &trans    &trans  &trans   &td_0  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -360,11 +281,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &none     &none         &none      &none           &none                             &none   &none           &none           &none          &none          &none
-&trans  &kp CAPS  &none         &kp TAB    &kp ESCAPE      &kp DEL                           &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
-&trans  &mo 2     &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                             &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
-&trans  &kp LGUI  &none         &none      &none           &none    &trans    &trans         &none   &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
-                  &trans        &trans     &trans          &trans   &trans    &kp BACKSPACE  &trans  &trans          &trans          &trans
+&trans  &none     &none         &none      &none           &none                         &none   &none           &none           &none          &none          &none
+&trans  &kp CAPS  &none         &kp TAB    &kp ESCAPE      &kp DELETE                    &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
+&trans  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
+&trans  &none     &none         &none      &none           &none       &trans    &trans  &none   &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
+                  &trans        &trans     &trans          &trans      &trans    &trans  &trans  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -372,10 +293,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans     &trans     &trans         &trans  &trans
-&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                    &trans  &trans     &trans     &trans         &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                    &trans  &kp RSHFT  &kp RCTRL  &kp RIGHT_ALT  &none   &trans
-&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans    &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK      &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans     &trans     &trans         &trans         &trans
+&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                    &trans  &trans     &trans     &trans         &trans         &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                    &trans  &kp RSHFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_WIN  &trans
+&trans  &trans  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans    &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK      &trans         &trans
                 &trans          &trans          &trans           &trans  &trans    &trans  &trans  &trans     &trans     &trans
             >;
         };
