@@ -26,16 +26,16 @@ layers:
   - P
   - ''
   - ''
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - J
-  - K
-  - L
-  - ;
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
   - ''
   - ''
   - Z
@@ -305,28 +305,3 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [53, 25]
-  k: LWIN
-  l: [default]
-- p: [53, 26]
-  k: LEFT ALT
-  l: [default]
-- p: [27, 53]
-  k: LCTRL
-  l: [default]
-- p: [53, 28]
-  k: LEFT SHIFT
-  l: [default]
-- p: [56, 34]
-  k: RGUI
-  l: [default]
-- p: [56, 33]
-  k: RIGHT ALT
-  l: [default]
-- p: [56, 32]
-  k: RCTRL
-  l: [default]
-- p: [56, 31]
-  k: RSHIFT
-  l: [default]
