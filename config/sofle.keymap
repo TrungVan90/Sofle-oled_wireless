@@ -7,7 +7,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 // Cấu hình tốc độ mouse (PHẢI đặt TRƯỚC include pointing.h)
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // Tốc độ di chuyển (default: 600)
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // Tốc độ scroll (default: 10)
 
@@ -23,6 +22,7 @@
 
 / {
     behaviors {
+        // ─── Space Layer Hold-Tap ───
         space_layer: space_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -31,11 +31,48 @@
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
         };
+
+        // ─── Home Row Mod cho TAY TRÁI ───
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = 
+                6  7  8  9  10 11
+                18 19 20 21 22 23
+                30 31 32 33 34 35
+                42 43 44 45 46 47
+                52 53 54 55 56 57 58 59
+            >;
+            hold-trigger-on-release;
+        };
+
+        // ─── Home Row Mod cho TAY PHẢI ───
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = 
+                0  1  2  3  4  5
+                12 13 14 15 16 17
+                24 25 26 27 28 29
+                36 37 38 39 40 41
+                48 49 50 51 52 53 54 55
+            >;
+            hold-trigger-on-release;
+        };
     };
 
     macros {
         // Window management macros
-
         fz_left: fz_left {
             label = "FZ_LEFT";
             compatible = "zmk,behavior-macro";
@@ -123,8 +160,7 @@
                 <&kp ENTER>;
         };
 
-        // Tap-dance cho số 1-12 thành F1-F10
-
+        // Tap-dance cho số 1-10 thành F1-F10
         td_1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -196,152 +232,59 @@
         };
     };
 
-    {
-    behaviors {
-
-        // ─── Home Row Mod cho TAY TRÁI ───
-        // Dùng "balanced" flavor + require-prior-idle để tránh false activation
-        // hold-trigger-key-positions chỉ chứa vị trí các phím BÊN PHẢI
-        // → Modifier chỉ kích hoạt khi giữ phím trái + nhấn phím phải (cross-hand)
-
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;        // Thời gian giữ để kích hoạt modifier
-            quick-tap-ms = <175>;           // Nhấn nhanh 2 lần → luôn là tap
-            require-prior-idle-ms = <150>;  // Nếu đang gõ nhanh → luôn là tap
-            bindings = <&kp>, <&kp>;
-
-            // Chỉ kích hoạt hold khi nhấn cùng phím BÊN PHẢI (cross-hand)
-            // Các số là vị trí phím bên phải trên Sofle 60-key layout:
-            //   Row 0: 6  7  8  9  10 11
-            //   Row 1: 18 19 20 21 22 23
-            //   Row 2: 30 31 32 33 34 35
-            //   Row 3: 42 43 44 45 46 47
-            //   Row 4:    52 53 54 55 56 57 58 59
-            hold-trigger-key-positions = <
-                6  7  8  9  10 11       // Row 0 phải
-                18 19 20 21 22 23       // Row 1 phải
-                30 31 32 33 34 35       // Row 2 phải
-                42 43 44 45 46 47       // Row 3 phải
-                52 53 54 55 56 57 58 59 // Row 4 phải (thumb cluster)
-            >;
-            hold-trigger-on-release;
-        };
-
-        // ─── Home Row Mod cho TAY PHẢI ───
-        // Tương tự nhưng hold-trigger-key-positions chứa vị trí BÊN TRÁI
-
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-
-            // Chỉ kích hoạt hold khi nhấn cùng phím BÊN TRÁI (cross-hand)
-            //   Row 0: 0  1  2  3  4  5
-            //   Row 1: 12 13 14 15 16 17
-            //   Row 2: 24 25 26 27 28 29
-            //   Row 3: 36 37 38 39 40 41
-            //   Row 4: 48 49 50 51 52 53 54 55
-            hold-trigger-key-positions = <
-                0  1  2  3  4  5        // Row 0 trái
-                12 13 14 15 16 17       // Row 1 trái
-                24 25 26 27 28 29       // Row 2 trái
-                36 37 38 39 40 41       // Row 3 trái
-                48 49 50 51 52 53 54 55 // Row 4 trái (thumb cluster)
-            >;
-            hold-trigger-on-release;
-        };
-    };
-
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "default";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
-            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
-
-            bindings = <
+            bindings = 
 &none  &none        &none        &none         &none         &none                                                  &none        &none         &none         &none        &none           &none
 &none  &kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &kp I         &kp O        &kp P           &none
 &none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                                                  &kp H        &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
 &none  &kp Z        &kp X        &kp C         &kp V         &kp B  &kp C_MUTE                               &none  &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
                     &none        &none         &mo 3         &mo 1  &none                                    &none  &lt 2 SPACE  &mo 4         &none         &none
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
             label = "lower";
-
-            // TODO: Some binds are waiting for shifted keycode support.
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-            // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-            //               |     |      |      |      |        |  |       |      |       |       |      |
-
-            bindings = <
+            bindings = 
 &trans  &none     &none         &none      &none           &none                         &none          &none           &none           &none          &none          &none
 &trans  &kp CAPS  &none         &kp TAB    &kp ESCAPE      &kp DELETE                    &none          &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
 &trans  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
 &trans  &none     &none         &none      &none           &none       &trans    &trans  &none          &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
                   &trans        &trans     &trans          &trans      &trans    &trans  &kp BACKSPACE  &trans          &trans          &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         raise_layer {
             label = "raise";
-
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-            // |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-            // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //                |      |       |       |      |      |  |      |      |      |       |      |
-
-            bindings = <
+            bindings = 
 &trans  &none         &none         &none         &none           &none                                  &none          &none          &none                 &none                  &none      &none
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4                           &kp PIPE       &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
 &trans  &kp LWIN      &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp PRINTSCREEN                        &kp EQUAL      &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
 &trans  &fz_cal       &fz_left      &fz_mid       &fz_right       &none            &bt BT_CLR    &trans  &kp GRAVE      &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
                       &trans        &trans        &trans          &trans           &trans        &trans  &kp BACKSPACE  &trans         &trans                &trans
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         numpad_layer {
             label = "numpad";
-            bindings = <
+            bindings = 
 &trans  &none     &none         &none      &none           &none                         &none          &none  &none  &none  &none  &none
 &trans  &none     &none         &none      &none           &kp DELETE                    &kp F12        &td_7  &td_8  &td_9  &none  &none
 &trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &kp DOT        &td_4  &td_5  &td_6  &none  &none
 &trans  &none     &none         &none      &none           &none       &trans    &trans  &kp F11        &td_1  &td_2  &td_3  &none  &none
                   &trans        &trans     &trans          &trans      &trans    &trans  &kp BACKSPACE  &td_0  &none  &none
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         layer_4 {
-            bindings = <
+            bindings = 
 &trans  &trans  &trans          &trans          &trans           &trans                    &trans  &trans     &trans     &trans         &trans         &trans
 &trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                    &trans  &trans     &trans     &trans         &trans         &trans
 &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                    &trans  &kp RSHFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_WIN  &trans
