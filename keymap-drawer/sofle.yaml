@@ -26,16 +26,16 @@ layers:
   - P
   - ''
   - ''
-  - {t: A, h: LEFT WIN}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LEFT SHIFT}
+  - A
+  - S
+  - D
+  - F
   - G
   - H
-  - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: RIGHT ALT}
-  - {t: ;, h: RGUI}
+  - J
+  - K
+  - L
+  - ;
   - ''
   - ''
   - Z
@@ -61,6 +61,67 @@ layers:
   - '4'
   - ''
   - ''
+  lower:
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - CAPS
+  - ''
+  - TAB
+  - ESCAPE
+  - DELETE
+  - ''
+  - PG UP
+  - UP ARROW
+  - PAGE DOWN
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - LGUI
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ENTER
+  - ''
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT
+  - ''''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - HOME
+  - ''
+  - END
+  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BACKSPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   raise:
   - {t: ▽, type: trans}
   - ''
@@ -183,67 +244,6 @@ layers:
   - '&td_0'
   - ''
   - ''
-  lower:
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - CAPS
-  - ''
-  - TAB
-  - ESCAPE
-  - DELETE
-  - ''
-  - PG UP
-  - UP ARROW
-  - PAGE DOWN
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - LGUI
-  - LEFT ALT
-  - LCTRL
-  - LEFT SHIFT
-  - ENTER
-  - ''
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT
-  - ''''
-  - ''
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - HOME
-  - ''
-  - END
-  - \
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   '4':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -305,3 +305,20 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [53, 25]
+  k: LWIN
+- p: [53, 26]
+  k: LEFT ALT
+- p: [27, 53]
+  k: LCTRL
+- p: [53, 28]
+  k: LEFT SHIFT
+- p: [56, 34]
+  k: RGUI
+- p: [56, 33]
+  k: RIGHT ALT
+- p: [56, 32]
+  k: RCTRL
+- p: [56, 31]
+  k: RSHIFT
