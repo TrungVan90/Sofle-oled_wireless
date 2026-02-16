@@ -196,76 +196,69 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
+    {
+    behaviors {
 
-        // R + Mo(1) → ESC (khi LOWER active)
-        // F + Mo(1) → Shift (khi LOWER active)
-        // J + Space → RShift
-        // D + Mo(1) → Ctrl (khi LOWER active)
-        // K + Space → RCtrl
-        // S + Mo(1) → Alt (khi LOWER active)
-        // L + Space → RAlt
-        // G + Mo(1) → Enter (khi LOWER active)
-        // ; + Space → To Layer 4
-        // A + Mo(1) → To Layer 2 (khi LOWER active)
+        // ─── Home Row Mod cho TAY TRÁI ───
+        // Dùng "balanced" flavor + require-prior-idle để tránh false activation
+        // hold-trigger-key-positions chỉ chứa vị trí các phím BÊN PHẢI
+        // → Modifier chỉ kích hoạt khi giữ phím trái + nhấn phím phải (cross-hand)
 
-        Left_win_combo {
-            bindings = <&kp LWIN>;
-            key-positions = <53 25>;
-            timeout-ms = <50>;
-            layers = <0>;
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;        // Thời gian giữ để kích hoạt modifier
+            quick-tap-ms = <175>;           // Nhấn nhanh 2 lần → luôn là tap
+            require-prior-idle-ms = <150>;  // Nếu đang gõ nhanh → luôn là tap
+            bindings = <&kp>, <&kp>;
+
+            // Chỉ kích hoạt hold khi nhấn cùng phím BÊN PHẢI (cross-hand)
+            // Các số là vị trí phím bên phải trên Sofle 60-key layout:
+            //   Row 0: 6  7  8  9  10 11
+            //   Row 1: 18 19 20 21 22 23
+            //   Row 2: 30 31 32 33 34 35
+            //   Row 3: 42 43 44 45 46 47
+            //   Row 4:    52 53 54 55 56 57 58 59
+            hold-trigger-key-positions = <
+                6  7  8  9  10 11       // Row 0 phải
+                18 19 20 21 22 23       // Row 1 phải
+                30 31 32 33 34 35       // Row 2 phải
+                42 43 44 45 46 47       // Row 3 phải
+                52 53 54 55 56 57 58 59 // Row 4 phải (thumb cluster)
+            >;
+            hold-trigger-on-release;
         };
 
-        Left_alt_combo {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <53 26>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+        // ─── Home Row Mod cho TAY PHẢI ───
+        // Tương tự nhưng hold-trigger-key-positions chứa vị trí BÊN TRÁI
 
-        Left_ctrl_combo {
-            bindings = <&kp LCTRL>;
-            key-positions = <27 53>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            bindings = <&kp>, <&kp>;
 
-        Left_shift_combo {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <53 28>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        Right_win_combo {
-            bindings = <&kp RGUI>;
-            key-positions = <56 34>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        Right_alt_combo {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <56 33>;
-            layers = <0>;
-            timeout-ms = <50>;
-        };
-
-        Right_ctrl_combo {
-            bindings = <&kp RCTRL>;
-            key-positions = <56 32>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        Right_shift_combo {
-            bindings = <&kp RSHIFT>;
-            key-positions = <56 31>;
-            timeout-ms = <50>;
-            layers = <0>;
+            // Chỉ kích hoạt hold khi nhấn cùng phím BÊN TRÁI (cross-hand)
+            //   Row 0: 0  1  2  3  4  5
+            //   Row 1: 12 13 14 15 16 17
+            //   Row 2: 24 25 26 27 28 29
+            //   Row 3: 36 37 38 39 40 41
+            //   Row 4: 48 49 50 51 52 53 54 55
+            hold-trigger-key-positions = <
+                0  1  2  3  4  5        // Row 0 trái
+                12 13 14 15 16 17       // Row 1 trái
+                24 25 26 27 28 29       // Row 2 trái
+                36 37 38 39 40 41       // Row 3 trái
+                48 49 50 51 52 53 54 55 // Row 4 trái (thumb cluster)
+            >;
+            hold-trigger-on-release;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -281,11 +274,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &none  &none  &none  &none  &none                       &none        &none  &none      &none    &none     &none
-&none  &kp Q  &kp W  &kp E  &kp R  &kp T                       &kp Y        &kp U  &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D  &kp F  &kp G                       &kp H        &kp J  &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp C_MUTE    &none  &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-              &none  &none  &mo 3  &mo 1  &none         &none  &lt 2 SPACE  &mo 4  &none      &none
+&none  &none        &none        &none         &none         &none                                                  &none        &none         &none         &none        &none           &none
+&none  &kp Q        &kp W        &kp E         &kp R         &kp T                                                  &kp Y        &kp U         &kp I         &kp O        &kp P           &none
+&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                                                  &kp H        &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &none
+&none  &kp Z        &kp X        &kp C         &kp V         &kp B  &kp C_MUTE                               &none  &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH        &none
+                    &none        &none         &mo 3         &mo 1  &none                                    &none  &lt 2 SPACE  &mo 4         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
