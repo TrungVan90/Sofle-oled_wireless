@@ -168,70 +168,70 @@
         td_1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N1>, <&kp F1>;
         };
 
         td_2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N2>, <&kp F2>;
         };
 
         td_3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N3>, <&kp F3>;
         };
 
         td_4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N4>, <&kp F4>;
         };
 
         td_5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N5>, <&kp F5>;
         };
 
         td_6: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N6>, <&kp F6>;
         };
 
         td_7: tap_dance_7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N7>, <&kp F7>;
         };
 
         td_8: tap_dance_8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N8>, <&kp F8>;
         };
 
         td_9: tap_dance_9 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N9>, <&kp F9>;
         };
 
         td_0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             bindings = <&kp N0>, <&kp F10>;
         };
     };
@@ -242,11 +242,11 @@
         default_layer {
             label = "default";
             bindings = <
-&none  &none        &none        &none         &none         &none                       &none        &none         &none         &none            &none           &none
-&none  &kp Q        &kp W        &kp E         &kp R         &kp T                       &kp Y        &kp U         &kp I         &kp O            &kp P           &none
-&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                       &kp H        &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L  &hmr RGUI SEMI  &none
-&none  &kp Z        &kp X        &kp C         &kp V         &kp B  &kp C_MUTE    &none  &kp N        &kp M         &kp COMMA     &kp DOT          &kp FSLH        &none
-                    &none        &none         &mo 3         &mo 1  &none         &none  &lt 2 SPACE  &mo 4         &none         &none
+&none  &none        &none        &none         &none         &none                       &none      &none         &none         &none            &none           &none
+&none  &kp Q        &kp W        &kp E         &kp R         &kp T                       &kp Y      &kp U         &kp I         &kp O            &kp P           &none
+&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                       &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L  &hmr RGUI SEMI  &none
+&none  &kp Z        &kp X        &kp C         &kp V         &kp B  &kp C_MUTE    &none  &kp N      &kp M         &kp COMMA     &kp DOT          &kp FSLH        &none
+                    &none        &none         &mo 2         &mo 1  &none         &none  &kp SPACE  &mo 4         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -258,7 +258,7 @@
 &trans  &none     &none         &none      &none           &none                         &none          &none           &none           &none          &none          &none
 &trans  &kp CAPS  &kp K_APP     &kp TAB    &kp ESCAPE      &kp DELETE                    &none          &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
 &trans  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
-&trans  &none     &none         &none      &none           &none       &trans    &trans  &none          &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
+&trans  &mo 3     &none         &none      &none           &none       &trans    &trans  &none          &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
                   &trans        &trans     &trans          &trans      &trans    &trans  &kp BACKSPACE  &trans          &trans          &trans
             >;
 
@@ -268,11 +268,11 @@
         raise_layer {
             label = "raise";
             bindings = <
-&trans  &none         &none         &none         &none           &none                                  &none      &none          &none                 &none                  &none      &none
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4                           &kp PIPE   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
-&trans  &kp LWIN      &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp PRINTSCREEN                        &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
-&trans  &fz_cal       &fz_left      &fz_mid       &fz_right       &none            &bt BT_CLR    &trans  &kp GRAVE  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
-                      &trans        &trans        &trans          &trans           &trans        &trans  &trans     &trans         &trans                &trans
+&trans  &none         &none         &none         &none           &none                                  &none          &none          &none                 &none                  &none      &none
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4                           &kp PIPE       &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
+&trans  &kp LWIN      &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp ENTER                              &kp EQUAL      &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
+&trans  &fz_cal       &fz_left      &fz_mid       &fz_right       &kp PRINTSCREEN  &bt BT_CLR    &trans  &kp GRAVE      &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
+                      &trans        &trans        &trans          &trans           &trans        &trans  &kp BACKSPACE  &trans         &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
