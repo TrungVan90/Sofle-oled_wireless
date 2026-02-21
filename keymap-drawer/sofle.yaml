@@ -53,11 +53,11 @@ layers:
   - ''
   - ''
   - ''
-  - numpad
+  - raise
   - lower
   - ''
   - ''
-  - {t: SPACE, h: raise}
+  - SPACE
   - '4'
   - ''
   - ''
@@ -99,7 +99,7 @@ layers:
   - ''''
   - ''
   - {t: ▽, type: trans}
-  - ''
+  - numpad
   - ''
   - ''
   - ''
@@ -152,7 +152,7 @@ layers:
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
-  - PRINTSCREEN
+  - ENTER
   - '='
   - +
   - '['
@@ -164,7 +164,7 @@ layers:
   - '&fz_left'
   - '&fz_mid'
   - '&fz_right'
-  - ''
+  - PRINTSCREEN
   - BT CLR
   - {t: ▽, type: trans}
   - '`'
@@ -175,11 +175,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -221,7 +221,7 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - ''
+  - {type: held}
   - ''
   - ''
   - ''
@@ -236,8 +236,8 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BACKSPACE
