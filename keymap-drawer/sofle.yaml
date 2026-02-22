@@ -53,11 +53,11 @@ layers:
   - ''
   - ''
   - ''
-  - raise
+  - ''
   - lower
   - ''
   - ''
-  - SPACE
+  - {t: SPACE, h: raise}
   - '4'
   - ''
   - ''
@@ -136,11 +136,11 @@ layers:
   - ''
   - ''
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - TAB
+  - ESC
+  - DELETE
   - '|'
   - '*'
   - (
@@ -160,7 +160,7 @@ layers:
   - '-'
   - ''
   - {t: ▽, type: trans}
-  - '&fz_cal'
+  - f_function
   - '&fz_left'
   - '&fz_mid'
   - '&fz_right'
@@ -175,11 +175,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BACKSPACE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -199,13 +199,13 @@ layers:
   - {t: ▽, type: trans}
   - ''
   - ''
-  - ''
-  - ''
+  - TAB
+  - ESCAPE
   - DELETE
-  - F12
-  - '&td_7'
-  - '&td_8'
-  - '&td_9'
+  - ''
+  - '7'
+  - '8'
+  - '9'
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -215,9 +215,9 @@ layers:
   - LEFT SHIFT
   - ENTER
   - .
-  - '&td_4'
-  - '&td_5'
-  - '&td_6'
+  - '4'
+  - '6'
+  - '6'
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -228,10 +228,10 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F11
-  - '&td_1'
-  - '&td_2'
-  - '&td_3'
+  - ''
+  - '1'
+  - '2'
+  - '3'
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -244,6 +244,67 @@ layers:
   - '&td_0'
   - ''
   - ''
+  f_function:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - ESC
+  - DELETE
+  - F11
+  - F7
+  - F8
+  - F9
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LWIN
+  - LEFT ALT
+  - LCTRL
+  - LEFT SHIFT
+  - ENTER
+  - {t: ▽, type: trans}
+  - F4
+  - F5
+  - F6
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   '4':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -258,11 +319,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
   - '&msc SCRL_UP'
   - '&mmv MOVE_UP'
   - '&msc SCRL_DOWN'
-  - {t: ▽, type: trans}
+  - {t: BT, h: '2'}
   - {t: ▽, type: trans}
   - NEXT
   - VOL UP
@@ -270,11 +331,11 @@ layers:
   - PREVIOUS
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT, h: '1'}
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_RIGHT'
-  - {t: ▽, type: trans}
+  - {t: BT, h: '3'}
   - {t: ▽, type: trans}
   - RSHFT
   - RCTRL
