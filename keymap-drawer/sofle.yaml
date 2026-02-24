@@ -53,12 +53,12 @@ layers:
   - ''
   - ''
   - ''
+  - ''
   - raise
   - lower
-  - BACKSPACE
-  - ENTER
   - SPACE
-  - '4'
+  - {t: BACKSPACE, h: '4'}
+  - ENTER
   - ''
   - ''
   lower:
@@ -115,10 +115,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - numpad
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -175,11 +175,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - f_function
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -237,11 +237,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: '0', type: held}
   - .
+  - {t: ▽, type: trans}
   - ''
   - ''
   f_function:
@@ -297,11 +297,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
   - F10
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -362,7 +362,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
