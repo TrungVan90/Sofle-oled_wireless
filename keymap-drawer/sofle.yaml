@@ -53,11 +53,11 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - raise
   - lower
   - BACKSPACE
   - ENTER
-  - {t: SPACE, h: raise}
+  - SPACE
   - '4'
   - ''
   - ''
@@ -99,7 +99,7 @@ layers:
   - ''''
   - ''
   - {t: ▽, type: trans}
-  - numpad
+  - ''
   - ''
   - ''
   - ''
@@ -118,7 +118,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - numpad
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -160,7 +160,7 @@ layers:
   - '-'
   - ''
   - {t: ▽, type: trans}
-  - f_function
+  - '&fz_cal'
   - '&fz_left'
   - '&fz_mid'
   - '&fz_right'
@@ -175,11 +175,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - f_function
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -214,14 +214,14 @@ layers:
   - LCTRL
   - LEFT SHIFT
   - ENTER
-  - .
+  - ''
   - '4'
   - '5'
   - '6'
   - ''
   - ''
   - {t: ▽, type: trans}
-  - {type: held}
+  - ''
   - ''
   - ''
   - ''
@@ -240,8 +240,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&td_0'
+  - {t: '0', type: held}
+  - .
   - ''
   - ''
   f_function:
@@ -282,7 +282,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -297,7 +297,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
