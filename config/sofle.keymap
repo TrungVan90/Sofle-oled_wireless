@@ -242,11 +242,11 @@
         default_layer {
             label = "default";
             bindings = <
-&none  &none        &none        &none         &none         &none                              &none                 &none         &none         &none            &none           &none
-&none  &kp Q        &kp W        &kp E         &kp R         &kp T                              &kp Y                 &kp U         &kp I         &kp O            &kp P           &none
-&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                              &kp H                 &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L  &hmr RGUI SEMI  &none
-&none  &kp Z        &kp X        &kp C         &kp V         &kp B  &kp C_MUTE       &none      &kp N                 &kp M         &kp COMMA     &kp DOT          &kp FSLH        &none
-                    &none        &none         &none         &mo 1  &kp BACKSPACE    &kp ENTER  &space_layer 2 SPACE  &mo 5         &none         &none
+&none  &none        &none        &none         &none         &none                              &none      &none         &none         &none            &none           &none
+&none  &kp Q        &kp W        &kp E         &kp R         &kp T                              &kp Y      &kp U         &kp I         &kp O            &kp P           &none
+&none  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G                              &kp H      &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L  &hmr RGUI SEMI  &none
+&none  &kp Z        &kp X        &kp C         &kp V         &kp B  &kp C_MUTE       &none      &kp N      &kp M         &kp COMMA     &kp DOT          &kp FSLH        &none
+                    &none        &none         &mo 2         &mo 1  &kp BACKSPACE    &kp ENTER  &kp SPACE  &mo 5         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -255,11 +255,11 @@
         lower_layer {
             label = "lower";
             bindings = <
-&trans  &none     &none         &none      &none           &none                         &none   &none           &none           &none          &none          &none
-&trans  &kp CAPS  &kp K_APP     &kp TAB    &kp ESCAPE      &kp DELETE                    &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
-&trans  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
-&trans  &mo 3     &none         &none      &none           &none       &trans    &trans  &none   &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
-                  &trans        &trans     &trans          &trans      &trans    &trans  &trans  &trans          &trans          &trans
+&trans  &none     &none         &none      &none           &none                         &none  &none           &none           &none          &none          &none
+&trans  &kp CAPS  &kp K_APP     &kp TAB    &kp ESCAPE      &kp DELETE                    &none  &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
+&trans  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
+&trans  &none     &none         &none      &none           &none       &trans    &trans  &none  &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
+                  &trans        &trans     &trans          &trans      &trans    &trans  &mo 3  &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -271,8 +271,8 @@
 &trans  &none     &none         &none      &none           &none                                  &none      &none          &none                 &none                  &none      &none
 &trans  &none     &none         &kp TAB    &kp ESC         &kp DELETE                             &kp PIPE   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
 &trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                              &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
-&trans  &mo 4     &fz_left      &fz_mid    &fz_right       &kp PRINTSCREEN  &bt BT_CLR    &trans  &kp GRAVE  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
-                  &trans        &trans     &trans          &trans           &trans        &trans  &trans     &trans         &trans                &trans
+&trans  &fz_cal   &fz_left      &fz_mid    &fz_right       &kp PRINTSCREEN  &bt BT_CLR    &trans  &kp GRAVE  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
+                  &trans        &trans     &trans          &trans           &trans        &trans  &mo 4      &trans         &trans                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -281,11 +281,11 @@
         numpad_layer {
             label = "numpad";
             bindings = <
-&trans  &none     &none         &none      &none           &none                         &none    &none         &none         &none         &none  &none
-&trans  &none     &none         &kp TAB    &kp ESCAPE      &kp DELETE                    &none    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &kp DOT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
-&trans  &none     &none         &none      &none           &none       &trans    &trans  &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                  &trans        &trans     &trans          &trans      &trans    &trans  &trans   &td_0         &none         &none
+&trans  &none     &none         &none      &none           &none                         &none         &none         &none         &none         &none  &none
+&trans  &none     &none         &kp TAB    &kp ESCAPE      &kp DELETE                    &none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
+&trans  &none     &none         &none      &none           &none       &trans    &trans  &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                  &trans        &trans     &trans          &trans      &trans    &trans  &kp NUMBER_0  &kp DOT       &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
