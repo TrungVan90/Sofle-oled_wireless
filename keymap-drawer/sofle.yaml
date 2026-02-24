@@ -99,11 +99,11 @@ layers:
   - ''''
   - ''
   - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - Ctl+A
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - Ctl+D
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
