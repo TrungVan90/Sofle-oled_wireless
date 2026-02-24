@@ -80,7 +80,7 @@ layers:
   - TAB
   - ESCAPE
   - DELETE
-  - ''
+  - F4
   - PG UP
   - UP ARROW
   - PAGE DOWN
@@ -91,8 +91,8 @@ layers:
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
-  - ENTER
-  - ''
+  - Ctl+R
+  - F2
   - LEFT ARROW
   - DOWN ARROW
   - RIGHT
@@ -152,7 +152,7 @@ layers:
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
-  - ENTER
+  - ''
   - '='
   - +
   - '['
@@ -213,7 +213,7 @@ layers:
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
-  - ENTER
+  - ''
   - ''
   - '4'
   - '5'
@@ -274,7 +274,7 @@ layers:
   - LEFT ALT
   - LCTRL
   - LEFT SHIFT
-  - ENTER
+  - ''
   - {t: ▽, type: trans}
   - F4
   - F5
