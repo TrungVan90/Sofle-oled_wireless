@@ -256,8 +256,8 @@
             label = "lower";
             bindings = <
 &trans  &none      &none         &none      &none           &none                         &none   &none           &none           &none          &none          &none
-&trans  &kp CAPS   &kp K_APP     &kp TAB    &kp ESCAPE      &kp DELETE                    &none   &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
-&trans  &kp LGUI   &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
+&trans  &kp CAPS   &kp K_APP     &kp TAB    &kp ESCAPE      &kp DELETE                    &kp F4  &kp PG_UP       &kp UP_ARROW    &kp PAGE_DOWN  &none          &none
+&trans  &kp LGUI   &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LC(R)                     &kp F2  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SQT        &none
 &trans  &kp LC(A)  &kp LC(X)     &kp LC(C)  &kp LC(V)       &kp LC(D)   &trans    &trans  &none   &kp HOME        &none           &kp END        &kp BACKSLASH  &trans
                    &trans        &trans     &trans          &trans      &trans    &mo 3   &trans  &trans          &trans          &trans
             >;
@@ -270,7 +270,7 @@
             bindings = <
 &trans  &none     &none         &none      &none           &none                                  &none      &none          &none                 &none                  &none      &none
 &trans  &none     &none         &kp TAB    &kp ESC         &kp DELETE                             &kp PIPE   &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &none
-&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                              &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                                  &kp EQUAL  &kp PLUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS  &none
 &trans  &fz_cal   &fz_left      &fz_mid    &fz_right       &kp PRINTSCREEN  &bt BT_CLR    &trans  &kp GRAVE  &kp AMPERSAND  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BSLH   &trans
                   &trans        &trans     &trans          &trans           &trans        &mo 4   &trans     &trans         &trans                &trans
             >;
@@ -283,7 +283,7 @@
             bindings = <
 &trans  &none     &none         &none      &none           &none                               &none    &none         &none         &none         &none  &none
 &trans  &none     &none         &kp TAB    &kp ESCAPE      &kp DELETE                          &none    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                           &none    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                               &none    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
 &trans  &none     &none         &none      &none           &none       &trans    &trans        &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
                   &trans        &trans     &trans          &trans      &trans    &kp NUMBER_0  &kp DOT  &trans        &none         &none
             >;
@@ -295,7 +295,7 @@
             bindings = <
 &trans  &trans    &trans        &trans     &trans          &trans                        &trans   &trans   &trans  &trans  &trans   &trans
 &trans  &trans    &trans        &kp TAB    &kp ESC         &kp DELETE                    &kp F11  &kp F7   &kp F8  &kp F9  &kp F12  &trans
-&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER                     &trans   &kp F4   &kp F5  &kp F6  &trans   &trans
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                         &trans   &kp F4   &kp F5  &kp F6  &trans   &trans
 &trans  &trans    &trans        &trans     &trans          &trans      &trans    &trans  &trans   &kp F1   &kp F2  &kp F3  &trans   &trans
                   &trans        &trans     &trans          &trans      &trans    &trans  &trans   &kp F10  &trans  &trans
             >;
