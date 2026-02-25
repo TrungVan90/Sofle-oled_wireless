@@ -252,7 +252,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        lower_layer {
+        arrow_layer {
             label = "lower";
             bindings = <
 &trans  &none      &none         &none      &none           &none                         &none   &none           &none           &none          &none          &none
@@ -265,7 +265,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer {
+        symbols_layer {
             label = "raise";
             bindings = <
 &trans  &none     &none         &none      &none           &none                                  &none      &none          &none                 &none                  &none      &none
@@ -281,17 +281,17 @@
         numpad_layer {
             label = "numpad";
             bindings = <
-&trans  &none     &none         &none      &none           &none                               &none    &none         &none         &none         &none  &none
-&trans  &none     &none         &kp TAB    &kp ESCAPE      &kp DELETE                          &none    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                               &none    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
-&trans  &none     &none         &none      &none           &none       &trans    &trans        &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                  &trans        &trans     &trans          &trans      &trans    &kp NUMBER_0  &kp DOT  &trans        &none         &none
+&trans  &none     &none         &none      &none           &none                         &none         &none         &none         &none         &none  &none
+&trans  &none     &none         &kp TAB    &kp ESCAPE      &kp DELETE                    &none         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &none
+&trans  &kp LWIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none                         &none         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
+&trans  &none     &none         &none      &none           &none       &trans    &trans  &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                  &trans        &trans     &trans          &trans      &trans    &trans  &kp NUMBER_0  &kp DOT       &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        f_function {
+        f_layout {
             bindings = <
 &trans  &trans    &trans        &trans     &trans          &trans                        &trans   &trans   &trans  &trans  &trans   &trans
 &trans  &trans    &trans        &kp TAB    &kp ESC         &kp DELETE                    &kp F11  &kp F7   &kp F8  &kp F9  &kp F12  &trans
@@ -301,7 +301,7 @@
             >;
         };
 
-        layer_4 {
+        mouse_layout {
             bindings = <
 &trans  &trans        &trans          &trans          &trans           &trans                          &trans  &trans      &trans        &trans         &trans          &trans
 &trans  &bt BT_SEL 0  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &bt BT_SEL 2                    &trans  &kp C_NEXT  &kp C_VOL_UP  &kp C_VOL_DN   &kp C_PREVIOUS  &trans
