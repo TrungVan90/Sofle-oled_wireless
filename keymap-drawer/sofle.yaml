@@ -57,7 +57,7 @@ layers:
   - raise
   - lower
   - SPACE
-  - {t: BACKSPACE, h: '4'}
+  - {t: BACKSPACE, h: mouse_layout}
   - ENTER
   - ''
   - ''
@@ -178,7 +178,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - f_function
+  - f_layout
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -239,12 +239,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: '0', type: held}
+  - {type: held}
+  - '0'
   - .
-  - {t: ▽, type: trans}
   - ''
   - ''
-  f_function:
+  f_layout:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -305,7 +305,7 @@ layers:
   - F10
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  '4':
+  mouse_layout:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
